@@ -1,8 +1,8 @@
 /* --- HERO BANNER CON ANIMACIÓN DE FONDO --- */
 .hero {
-    width: 1400px;
+    width: 100%;
     margin: 0 auto;
-    height: 550px;
+    height: 850px;
     background-size: cover;
     background-position: center;
     position: relative;
