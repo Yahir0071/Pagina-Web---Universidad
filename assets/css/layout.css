@@ -244,3 +244,100 @@ footer {
         background-color: rgba(0, 0, 0, 0.1);
     }
 }
+
+/* --- CONFIGURACIÓN DE COLUMNAS DEL FOOTER --- */
+footer { 
+    background-color: #1a1a1a; 
+    color: white; 
+    padding: 40px 0 20px 0; 
+    margin-top: 50px; 
+}
+
+.footer-contenedor {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+    padding: 0 20px;
+    flex-wrap: wrap;
+}
+
+.footer-columna {
+    flex: 1;
+    min-width: 160px;
+    text-align: left;
+}
+
+.footer-columna.columna-ancha {
+    flex: 1.5;
+    min-width: 210px;
+}
+
+.footer-columna h3 {
+    color: #fff;
+    font-size: 1.1em;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+/* QUITAR PUNTOS DE LAS LISTAS DEL FOOTER */
+.footer-columna ul {
+    list-style: none; 
+    padding: 0;
+    margin: 0;
+}
+
+.footer-columna ul li {
+    margin-bottom: 8px;
+    line-height: 1.4; 
+}
+
+/* ARREGLAR ENLACES AZULES */
+.footer-columna a {
+    color: #ccc;             
+    text-decoration: none;   
+    transition: color 0.2s ease;
+    font-weight: normal;     
+}
+
+.footer-columna a:hover {
+    color: #00a8cc;        
+    text-decoration: underline;
+}
+
+/* ESTILOS DE TEXTO PARA HORARIOS */
+.horario-titulo {
+    font-size: 0.9em;
+    font-weight: bold;
+    color: #fff;
+    margin-top: 12px;
+    margin-bottom: 4px;
+}
+
+.horario-enlace {
+    font-size: 0.85em;
+    color: #aaa;
+}
+
+.horario-enlace a {
+    color: #fff;
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+.redes-sociales {
+    display: flex;
+    gap: 12px;
+    font-size: 1.2em;
+}
+
+.footer-inferior {
+    border-top: 1px solid #333;
+    margin-top: 30px;
+    padding-top: 15px;
+    text-align: center;
+    color: #666;
+    font-size: 0.85em;
+}
