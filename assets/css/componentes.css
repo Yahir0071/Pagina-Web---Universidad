@@ -418,3 +418,111 @@ input[type="submit"]:hover {
     color: #444;
     line-height: 1.5; /* Altura de línea adaptada para bloques de lectura cortos */
 }
+
+/* --- SECCIÓN MEDIDA ÚNICA CORREGIDA (APILADO VERTICAL) --- */
+
+.medidas-minibodega {
+    margin-top: 60px;
+    padding-top: 40px;
+    border-top: 1px solid #eee;
+    text-align: center;
+}
+
+.medidas-minibodega h2 {
+    color: #002b5e;
+    font-size: 1.8em;
+    margin-bottom: 30px;
+}
+
+.contenedor-medida-unica {
+    display: flex;
+    justify-content: center;
+    margin: 30px 0;
+}
+
+/* Forzamos que la tarjeta sea un bloque vertical estricto */
+.tarjeta-medida-bloque {
+    background: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 16px;
+    overflow: hidden;
+    width: 100%;
+    max-width: 350px; /* Ancho ideal idéntico a tus otras tarjetas */
+    box-shadow: 0 4px 15px rgba(0,0,0,0.06);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: block; /* Evita que herede flex-direction de otras clases */
+    text-align: left;
+}
+
+.tarjeta-medida-bloque:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 24px rgba(0,0,0,0.12);
+}
+
+/* Contenedor de la imagen isométrica con fondo oscuro */
+.imagen-medida {
+    background-color: #1a1a1a;
+    padding: 25px 20px;
+    height: 220px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.imagen-medida img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+/* Bloque de contenido */
+.contenido-medida {
+    padding: 25px 20px;
+}
+
+.contenido-medida h3 {
+    color: #1a1a1a;
+    font-size: 1.4em;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+.descripcion-medida h4 {
+    color: #777;
+    font-size: 0.85em;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 6px;
+}
+
+.descripcion-medida p {
+    font-size: 0.95em;
+    color: #444;
+    line-height: 1.5;
+    margin-bottom: 20px; /* Espacio antes de la dimensión */
+}
+
+/* Estilo para la dimensión colocada abajo */
+.dimension {
+    font-size: 0.9em;
+    color: #00a8cc; /* Celeste corporativo de SmartWare para resaltar */
+    font-weight: bold;
+    border-top: 1px dashed #eee;
+    padding-top: 15px;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.icono-escala {
+    transform: rotate(-45deg);
+    display: inline-block;
+}
+
+/* Contenedor del botón inferior */
+.contenedor-accion-central {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
