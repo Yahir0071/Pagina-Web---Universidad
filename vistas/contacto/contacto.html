@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Contacto | SmartWare</title>
+    <link rel="stylesheet" href="../assets/css/global.css">
+    <link rel="stylesheet" href="../assets/css/layout.css">
+    <link rel="stylesheet" href="../assets/css/componentes.css">
+    <link rel="stylesheet" href="../assets/css/paginas.css">
+</head>
+
+<body>
+    <div class="top-bar">
+        <span>📞 Central: (01) 241-0510</span>
+        <span>🕒 Horario de Atención: Lun-Vie de 8:00 am a 7:00 pm</span>
+    </div>
+
+    <header>
+        <div class="header-contenedor">
+            <a href="../index.html" class="logo">
+                <div class="logo-icono">🏢</div>
+                <div class="logo-texto">Smart<span>Ware</span></div>
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="promos.html">Promociones</a></li>
+                    <li><a href="servicios.html">Servicios</a></li>
+                    <li><a href="tecnologia.html">Tecnología</a></li>
+                    <li><a href="tarifas.html">Tarifas</a></li>
+                    <li><a href="sedes.html">Sedes</a></li>
+                    <li><a href="preguntas.html">Preguntas Frecuentes</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="contacto.html" class="btn-cta">Solicita asesoría</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="contenedor">
+        <section>
+            <h2>Formulario de Registro y Evaluación</h2>
+            <p>Ingresa los datos de tu empresa para que nuestro sistema perfile el espacio y la arquitectura de datos
+                que necesitas.</p>
+            <br>
+            <form action="procesar.php" method="POST" enctype="multipart/form-data"
+                oninput="resultado.value=espacio.value">
+
+                <fieldset>
+                    <legend>1. Datos Fiscales y de Contacto</legend>
+
+                    <label for="ruc">RUC (11 dígitos):</label>
+                    <input type="text" id="ruc" name="ruc" required pattern="[0-9]{11}" placeholder="Ej. 20123456789">
+
+                    <label for="empresa">Razón Social:</label>
+                    <input type="text" id="empresa" name="empresa" required placeholder="Nombre legal de la empresa">
+
+                    <label for="email">Correo Corporativo:</label>
+                    <input type="email" id="email" name="email" required placeholder="logistica@tuempresa.com">
+                </fieldset>
+
+                <fieldset>
+                    <legend>2. Configuración del Almacenamiento</legend>
+
+                    <label for="tipo_servicio">Tipo de Servicio Requerido:</label>
+                    <select id="tipo_servicio" name="tipo_servicio" required>
+                        <option value="">-- Selecciona una opción --</option>
+                        <option value="minibodega">Minibodega (Pymes)</option>
+                        <option value="industrial">Almacenaje Industrial (Palets)</option>
+                        <option value="crossdocking">Cross-Docking (Paso rápido)</option>
+                    </select>
+
+                    <label for="espacio">Metros Cuadrados estimados (Desliza para ajustar):</label>
+                    <input type="range" id="espacio" name="espacio" min="10" max="2000" value="100" step="10">
+                    <p class="rango-valor">Área seleccionada: <output name="resultado" for="espacio">100</output> m²</p>
+
+                    <label for="detalles">Descripción de la mercadería:</label>
+                    <textarea id="detalles" name="detalles" rows="4"
+                        placeholder="Describe brevemente qué tipo de productos vas a almacenar..."></textarea>
+                </fieldset>
+
+                <fieldset>
+                    <legend>3. Documentación Adicional</legend>
+                    <label for="inventario">Adjuntar archivo de inventario previo (PDF o Excel):</label>
+                    <input type="file" id="inventario" name="inventario" accept=".pdf, .xls, .xlsx">
+
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="terminos" name="terminos" required>
+                        <label for="terminos">Acepto los términos del servicio y la política de tratamiento de
+                            datos.</label>
+                    </div>
+                </fieldset>
+
+                <input type="submit" value="Enviar Solicitud al Sistema">
+            </form>
+        </section>
+
+        <aside>
+            <h3>Canales Directos</h3>
+            <p><strong>Teléfono:</strong> (01) 241-0510</p>
+            <p><strong>Email:</strong> soporte@smartware.pe</p>
+            <hr>
+            <p>Nuestro equipo de ingenieros de software e infraestructura se contactará en menos de 24 horas hábiles.
+            </p>
+        </aside>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 SmartWare. Sistema inteligente de gestión de almacén para negocios.</p>
+    </footer>
+</body>
+
+</html>

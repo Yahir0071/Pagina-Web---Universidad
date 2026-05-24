@@ -1,0 +1,72 @@
+/* --- HERO BANNER CON ANIMACIÓN DE FONDO --- */
+.hero {
+    width: 1400px;
+    margin: 0 auto;
+    height: 550px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    border-bottom: 5px solid #002b5e;
+    /* Vinculamos la animación: dura 15 segundos en total (5s por cada una de las 3 imágenes) */
+    animation: cambiarFondoHero 15s infinite ease-in-out;
+}
+
+/* @keyframes para alternar las 3 imágenes de fondo en tu clase .hero */
+@keyframes cambiarFondoHero {
+    /* --- IMAGEN 1 (fondo.png) --- */
+    0%, 30% {
+        background-image: url('../img/fondo.png');
+    }
+    
+    /* --- IMAGEN 2 (Ejm: DatosDash.png o la que elijas) --- */
+    33%, 63% {
+        background-image: url('../img/DatosDash.png');
+    }
+    
+    /* --- IMAGEN 3 (Ejm: LimaCentro.png o la que elijas) --- */
+    66%, 96% {
+        background-image: url('../img/LimaCentro.png');
+    }
+    
+    /* Volvemos al inicio automáticamente para cerrar el ciclo infinito */
+    100% {
+        background-image: url('../img/fondo.png');
+    }
+}
+
+.hero-caja {
+    position: absolute;
+    top: 50%;
+    left: 5%;
+    transform: translateY(-50%); 
+    background-color: rgba(255, 255, 255, 0.95);
+    padding: 40px;
+    max-width: 450px; 
+    width: 90%;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+@media (max-width: 768px) {
+    .hero-caja {
+        left: 50%;
+        transform: translate(-50%, -50%); 
+        text-align: center;
+    }
+}
+
+.hero-caja h2 { 
+    color: #002b5e; 
+    font-size: 2em; 
+    margin-bottom: 15px; 
+    line-height: 1.2; 
+}
+
+.hero-caja p { 
+    font-size: 1.2em; 
+    margin-bottom: 25px; 
+    color: #555; 
+}
+
+
+

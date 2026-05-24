@@ -1,0 +1,349 @@
+/* --- BOTONES --- */
+.btn-cta { 
+    background-color: #00a8cc;
+    color: white; 
+    padding: 10px 20px; 
+    border-radius: 25px;
+    border: 2px solid transparent; 
+}
+
+.btn-cta:hover { 
+    background-color: white; 
+    color: #00a8cc; 
+    border: 2px solid #00a8cc; 
+}
+
+.btn-hero { 
+    display: inline-block; 
+    background-color: #ffcc00; 
+    color: #000; 
+    font-weight: bold; 
+    padding: 15px 30px; 
+    text-decoration: none; 
+    border-radius: 30px; 
+    font-size: 1.1em; }
+.btn-hero:hover { 
+    background-color: #e6b800;
+}
+/* --- ANIMACIONES EN BOTONES  --- */
+.btn-cta, .btn-hero, .btn-promo {
+    transition: all 0.3s ease; 
+    display: inline-block;
+}
+
+.btn-cta:hover, .btn-hero:hover, .btn-promo:hover {
+    transform: scale(1.05); 
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+
+/* --- ELEMENTOS VARIOS --- */
+article { 
+    margin-bottom: 25px; 
+    padding-bottom: 25px; 
+    border-bottom: 1px solid #eee; 
+}
+
+.destacado { 
+    font-size: 1.2em; 
+    color: #004080; 
+    font-weight: bold; 
+    margin-bottom: 15px; 
+}
+
+/* --- DISEÑO DE IMAGENES --- */
+.img-fluida { 
+    width: 100%; 
+    height: 300px; 
+    object-fit: cover; 
+    border-radius: 8px; 
+    margin: 20px 0; 
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); 
+}
+
+.img-fluida2 {
+    width: 50%;
+    height: 300px;
+    display: block;
+    margin: 20px auto;
+    
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+/* --- TABLAS --- */
+table { 
+    width: 100%; 
+    border-collapse: collapse; 
+    margin-top: 20px; 
+}
+
+caption { 
+    font-weight: bold; 
+    font-size: 1.4em; 
+    margin-bottom: 15px; 
+    color: #002b5e; 
+}
+
+th, td { 
+    border: 1px solid #ccc; 
+    padding: 15px; 
+    text-align: center; 
+}
+
+th { 
+    background-color: #004080; 
+    color: white; 
+}
+
+tr:nth-child(even) { 
+    background-color: #f9f9f9; 
+}
+
+.tabla-nota { 
+    background-color: #b3d9ff; 
+    color: #002b5e; 
+    text-align: center; 
+    font-weight: bold; 
+}
+
+/* --- TABLAS RESPONSIVAS --- */
+.tabla-responsiva {
+    overflow-x: auto;
+    width: 100%;
+    margin-top: 20px;
+}
+
+tr {
+    transition: background-color 0.2s ease;
+}
+
+tr:nth-child(even) { 
+    background-color: #f9f9f9; 
+}
+
+tr:hover {
+    background-color: #e6f2ff; /* Resalta la fila al pasar el mouse */
+}
+
+/* --- FORMULARIOS --- */
+fieldset { 
+    border: 2px solid #004080; 
+    padding: 25px; 
+    border-radius: 8px; 
+    margin-bottom: 25px; 
+    background-color: #fafcfd; 
+}
+
+legend { 
+    background-color: #004080; 
+    color: white; 
+    padding: 5px 15px; 
+    border-radius: 4px; 
+    font-weight: bold; 
+}
+
+label { 
+    display: block; 
+    margin-bottom: 8px; 
+    font-weight: bold; 
+    color: #002b5e; 
+}
+
+input[type="text"], input[type="email"], input[type="date"], select, textarea { 
+    width: 100%; 
+    padding: 12px; 
+    margin-bottom: 20px; 
+    border: 1px solid #ccc; 
+    border-radius: 4px; 
+    font-family: inherit; 
+}
+
+/* --- FORMULARIOS ESTILIZADOS  --- */
+input[type="text"]:focus, input[type="email"]:focus, select:focus, textarea:focus {
+    outline: none;
+    border-color: #00a8cc;
+    box-shadow: 0 0 8px rgba(0, 168, 204, 0.3);
+}
+
+textarea { 
+    resize: vertical; 
+}
+
+.checkbox-group { 
+    display: flex; 
+    align-items: center; 
+    gap: 10px; 
+    margin-bottom: 20px; 
+}
+
+.checkbox-group label {
+     margin-bottom: 0; 
+     font-weight: normal; 
+}
+
+input[type="submit"] { 
+    background-color: #00a8cc; 
+    color: white; 
+    font-weight: bold; 
+    border: none; 
+    cursor: pointer; 
+    font-size: 1.2em; 
+    padding: 15px; 
+    border-radius: 5px; 
+    transition: background 0.3s; 
+}
+
+input[type="submit"]:hover { 
+    background-color: #008ba3;
+}
+
+.rango-valor { 
+    margin-bottom: 20px; 
+    font-weight: bold; 
+    color: #00a8cc; 
+}
+
+/* --- ACORDEÓN (FAQ) --- */
+.faq-item {
+    margin-bottom: 10px;
+}
+
+.faq-pregunta {
+    font-size: 1.3em;
+    font-weight: bold;
+    color: #002b5e;
+    cursor: pointer;
+    padding-bottom: 10px;
+}
+
+.faq-item p {
+    margin-top: 10px;
+}
+
+.faq-item ul {
+    margin-top: 10px;
+    margin-left: 25px;
+}
+
+/* --- CLASES DE UTILIDAD Y TEXTO --- */
+.leyenda-imagen {
+    text-align: center;
+    color: #555;
+    font-style: italic;
+    margin-bottom: 20px;
+}
+
+.separador-claro {
+    border: 1px solid #eee;
+    margin-bottom: 25px;
+}
+
+.espaciado-inferior {
+    margin-bottom: 20px;
+}
+
+.btn-bloque {
+    display: block;
+    text-align: center;
+}
+
+
+/* --- PROMOCIONES --- */
+.contenedor-promos {
+    display: grid;
+    grid-template-columns: repeat(3, 300px);
+    justify-content: center;
+    gap: 50px;
+}
+
+.card-promo {
+    background: #f1f1f1;
+    border-radius: 15px;
+    overflow: hidden;
+    width: 100%;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+.contenedor-almacen{
+    display: grid;
+    grid-template-columns: repeat(3, 350px);
+    justify-content: center;
+    gap: 50px;
+    padding: 30px;
+}
+
+.card-promo img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.card-contenido {
+    padding: 15px;
+    text-align: center;
+}
+
+.card-contenido p {
+    font-size: 15px;
+    margin-bottom: 15px;
+}
+
+.btn-promo {
+    display: inline-block;
+    background: #ffe600;
+    color: black;
+    padding: 10px 20px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+.btn-promo:hover {
+    background: #ffd000;
+}
+
+/* --- CSS GRID PARA BLOG, TECNOLOGÍA Y PROMOS --- */
+.grid-arquitectura, 
+.grid-articulos, 
+.contenedor-promos, 
+.contenedor-almacen {
+    display: grid;
+    /* auto-fit crea tantas columnas como quepan sin romperse */
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin-top: 25px;
+    padding: 10px 0;
+}
+
+/* --- TARJETAS CON EFECTOS  --- */
+.tarjeta-caracteristica, 
+.tarjeta-articulo, 
+.card-promo {
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.tarjeta-caracteristica:hover, 
+.tarjeta-articulo:hover, 
+.card-promo:hover {
+    transform: translateY(-8px); /* La tarjeta "flota" hacia arriba */
+    box-shadow: 0 15px 25px rgba(0,0,0,0.15);
+}
+
+/* Asegurar que las imágenes dentro de tarjetas no se deformen */
+.tarjeta-articulo img, 
+.card-promo img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.tarjeta-cuerpo, .card-contenido {
+    padding: 20px;
+    flex-grow: 1; 
+}

@@ -1,0 +1,168 @@
+/* --- BARRA SUPERIOR E INFO --- */
+.top-bar { 
+    background-color: #ffcc00; 
+    color: #000; 
+    font-weight: bold; 
+    padding: 8px 20px; 
+    display: flex; 
+    justify-content: space-between; 
+    max-width: 1400px; 
+    margin: 0 auto; 
+    font-size: 0.9em; 
+}
+
+/* --- CABECERA Y NAVEGACIÓN --- */
+header { 
+    background-color: #002b5e; 
+    color: white; 
+    border-bottom: 5px solid #00a8cc; 
+}
+
+.header-contenedor { 
+    max-width: 1400px; 
+    width: 100%;
+    margin: 0 auto; 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    padding: 15px 20px;
+    flex-wrap: wrap;
+}
+
+/* --- LOGO  --- */
+.logo { 
+    display: flex; 
+    align-items: center; 
+    gap: 10px; 
+    text-decoration: none; 
+    color: white; 
+}
+
+.logo-icono { 
+    font-size: 2.5em; 
+    background-color: #00a8cc; 
+    padding: 5px 10px; 
+    border-radius: 8px; 
+    border: 2px solid white; 
+}
+
+.logo-texto { 
+    font-size: 1.8em; 
+    font-weight: 900; 
+    letter-spacing: 1px; 
+}
+
+.logo-texto span { 
+    color: #00a8cc; 
+}
+
+nav ul { 
+    list-style-type: none; 
+    display: flex; 
+    align-items: center; 
+    gap: 20px; 
+}
+
+nav a { 
+    color: white; 
+    text-decoration: none; 
+    font-weight: bold; 
+    padding: 8px 12px; 
+    transition: background 0.3s; 
+}
+
+nav a:hover { 
+    background-color: #004080; 
+    border-radius: 4px; 
+}
+
+/* --- CONTENEDOR PRINCIPAL FIJO --- */
+.contenedor { 
+    display: flex; 
+    max-width: 1400px; 
+    width: 100%;
+    margin: 30px auto; 
+    gap: 30px; 
+    padding: 0 20px; 
+}
+
+section { 
+    flex: 3; 
+    background-color: white; 
+    padding: 30px;
+    border-radius: 8px; 
+    border: 1px solid #ddd; 
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05); 
+}
+
+/* ---BARRA LATERAL --- */
+aside { 
+    flex: 1; 
+    background-color: #e6f2ff; 
+    padding: 25px; 
+    border-radius: 8px; 
+    border: 1px solid #b3d9ff; 
+    min-width: 250px;
+}
+
+aside hr { 
+    margin: 15px 0; 
+    border: 0; 
+    border-top: 1px solid #b3d9ff;
+ }
+ 
+aside ul { 
+    margin-left: 20px; 
+    margin-top: 10px; 
+}
+
+/* --- FOOTER --- */
+footer { 
+    background-color: #1a1a1a; 
+    color: white; 
+    text-align: center; 
+    padding: 30px; 
+    margin-top: 50px; 
+}
+
+/* =========================================
+   MEDIA QUERIES (DISEÑO RESPONSIVO)
+   ========================================= */
+
+/* Para Tablets */
+@media (max-width: 992px) {
+    .contenedor {
+        flex-direction: column; 
+    }
+}
+
+/* Para Móviles */
+@media (max-width: 768px) {
+    .top-bar {
+        flex-direction: column;
+        text-align: center;
+        gap: 5px;
+    }
+    
+    .header-contenedor {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    /* Preparación del menú responsivo */
+    nav {
+        width: 100%;
+    }
+
+    nav ul {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    nav a {
+        display: block;
+        text-align: center;
+        padding: 10px;
+        border-bottom: 1px solid #004080;
+    }
+}
