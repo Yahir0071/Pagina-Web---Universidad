@@ -15,22 +15,22 @@
 @keyframes cambiarFondoHero {
     /* --- IMAGEN 1 (fondo.png) --- */
     0%, 30% {
-        background-image: url('../img/fondo.png');
+        background-image: url('../img/fondo1.png');
     }
     
     /* --- IMAGEN 2 (Ejm: DatosDash.png o la que elijas) --- */
     33%, 63% {
-        background-image: url('../img/DatosDash.png');
+        background-image: url('../img/fondo2.png');
     }
     
     /* --- IMAGEN 3 (Ejm: LimaCentro.png o la que elijas) --- */
     66%, 96% {
-        background-image: url('../img/LimaCentro.png');
+        background-image: url('../img/fondo3.png');
     }
     
     /* Volvemos al inicio automáticamente para cerrar el ciclo infinito */
     100% {
-        background-image: url('../img/fondo.png');
+        background-image: url('../img/fondo1.png');
     }
 }
 
