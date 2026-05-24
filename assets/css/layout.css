@@ -33,29 +33,18 @@ header {
 .logo { 
     display: flex; 
     align-items: center; 
-    gap: 10px; 
     text-decoration: none; 
-    color: white; 
 }
 
-.logo-icono { 
-    font-size: 2.5em; 
-    background-color: #00a8cc; 
-    padding: 5px 10px; 
-    border-radius: 8px; 
-    border: 2px solid white; 
+/* Control del tamaño del nuevo logo (Limpio, sin display flex aquí) */
+.logo-img {
+    height: 50px; 
+    width: auto;   
+    display: block;
+    object-fit: contain;
 }
 
-.logo-texto { 
-    font-size: 1.8em; 
-    font-weight: 900; 
-    letter-spacing: 1px; 
-}
-
-.logo-texto span { 
-    color: #00a8cc; 
-}
-
+/* --- NAVEGACIÓN (¡MANTENER!) --- */
 nav ul { 
     list-style-type: none; 
     display: flex; 
