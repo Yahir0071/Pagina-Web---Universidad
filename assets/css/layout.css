@@ -38,10 +38,18 @@ header {
 
 /* Control del tamaño del nuevo logo (Limpio, sin display flex aquí) */
 .logo-img {
-    height: 50px; 
-    width: auto;   
+    height: 100%;
+    width: 100%; 
     display: block;
     object-fit: contain;
+}
+
+.logo-contenedor {
+    display: flex;
+    align-items: center;    
+    justify-content: center; 
+    height: 50px;           
+    width: 180px;      
 }
 
 /* --- NAVEGACIÓN (¡MANTENER!) --- */
