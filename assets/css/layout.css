@@ -166,3 +166,84 @@ footer {
         border-bottom: 1px solid #004080;
     }
 }
+
+/* --- CONFIGURACIÓN DEL SUBMENÚ DESPLEGABLE --- */
+
+/* Asegura que el contenedor padre sea la referencia de posición */
+.menu-desplegable {
+    position: relative;
+}
+
+/* Estilos base del submenú (oculto por defecto) */
+.submenu {
+    display: none;
+    position: absolute;
+    top: 100%; /* Se despliega justo debajo del botón Servicios */
+    left: 0;
+    background-color: #002b5e; /* Mismo color azul oscuro del header */
+    min-width: 220px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    border-radius: 0 0 4px 4px;
+    border-top: 3px solid #00a8cc; /* Línea celeste para hacer juego con el header */
+    z-index: 100; /* Asegura que flote por encima del contenido/Hero */
+    list-style: none;
+    padding: 10px 0;
+}
+
+/* Cambiamos la disposición del submenú a bloque vertical */
+.submenu li {
+    width: 100%;
+    line-height: 1.2; /* Ajuste de línea para que no sea tan alto como el global */
+}
+
+/* Estilos para los enlaces dentro del submenú */
+.submenu a {
+    display: block;
+    padding: 12px 20px;
+    font-size: 0.95em;
+    font-weight: normal;
+    text-align: left;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    transition: background 0.2s ease;
+}
+
+/* Quitar el borde inferior al último elemento del submenú */
+.submenu li:last-child a {
+    border-bottom: none;
+}
+
+/* Efecto Hover para los elementos del submenú */
+.submenu a:hover {
+    background-color: #004080;
+    border-radius: 0;
+    color: #00a8cc; /* El texto cambia a celeste al pasar el mouse */
+}
+
+/* --- TRUCO CLAVE: Mostrar el submenú al pasar el cursor por el elemento padre --- */
+.menu-desplegable:hover .submenu {
+    display: block;
+}
+
+
+/* --- AJUSTE RESPONSIVO EN MÓVILES (Media Query max-width: 768px) --- */
+/* Añade esto dentro de tu bloque @media (max-width: 768px) existente para que no se rompa en celulares */
+@media (max-width: 768px) {
+    .submenu {
+        position: static; /* En celulares es mejor que empuje el contenido hacia abajo en vez de flotar */
+        width: 100%;
+        background-color: #001f42; /* Un tono un poco más oscuro para diferenciarlo */
+        box-shadow: none;
+        border-top: none;
+        padding: 0;
+    }
+    
+    .menu-desplegable:hover .submenu {
+        display: block;
+    }
+    
+    .submenu a {
+        text-align: center;
+        padding: 10px;
+        background-color: rgba(0, 0, 0, 0.1);
+    }
+}
