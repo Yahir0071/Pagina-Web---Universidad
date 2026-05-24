@@ -347,3 +347,74 @@ input[type="submit"]:hover {
     padding: 20px;
     flex-grow: 1; 
 }
+
+/* --- SECCIÓN DE BENEFICIOS (MINIBODEGA) --- */
+
+.destacado-centro {
+    text-align: center;
+    font-size: 1.1em;
+    color: #555;
+    margin-bottom: 40px;
+}
+
+/* Contenedor principal con CSS Grid */
+.grid-beneficios {
+    display: grid;
+    /* auto-fit calcula cuántas columnas de mínimo 300px caben en la pantalla de forma fluida */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    padding: 10px 0;
+}
+
+/* Tarjeta estructurada con Flexbox */
+.tarjeta-beneficio {
+    background-color: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
+    
+    /* Flexbox vertical para alinear la imagen arriba y el texto abajo */
+    display: flex;
+    flex-direction: column;
+    
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Efecto hover interactivo idéntico al de tus otras promos */
+.tarjeta-beneficio:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12);
+}
+
+/* Contenedor de la imagen */
+.imagen-beneficio {
+    width: 100%;
+    height: 280px; /* Altura fija para que todas las fotos queden perfectamente alineadas */
+    overflow: hidden;
+}
+
+.imagen-beneficio img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Evita que la imagen se estire o se deforme */
+}
+
+/* Caja de texto inferior (Fondo crema sutil del diseño original) */
+.cuerpo-beneficio {
+    background-color: #fefbe9; /* Tono crema claro muy elegante */
+    padding: 25px 20px;
+    text-align: center;
+    border-top: 1px solid #f5f0cd;
+    
+    /* Flexbox nos asegura que el texto se centre verticalmente si hay variaciones de tamaño */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1; 
+}
+
+.cuerpo-beneficio p {
+    font-size: 0.98em;
+    color: #444;
+    line-height: 1.5; /* Altura de línea adaptada para bloques de lectura cortos */
+}
