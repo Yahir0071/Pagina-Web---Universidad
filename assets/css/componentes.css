@@ -21,10 +21,13 @@
     padding: 15px 30px; 
     text-decoration: none; 
     border-radius: 30px; 
-    font-size: 1.1em; }
+    font-size: 1.1em; 
+}
+
 .btn-hero:hover { 
     background-color: #e6b800;
 }
+
 /* --- ANIMACIONES EN BOTONES  --- */
 .btn-cta, .btn-hero, .btn-promo {
     transition: all 0.3s ease; 
@@ -66,7 +69,6 @@ article {
     height: 300px;
     display: block;
     margin: 20px auto;
-    
     box-shadow: 0 10px 20px rgba(0,0,0,0.2);
 }
 
@@ -122,7 +124,7 @@ tr:nth-child(even) {
 }
 
 tr:hover {
-    background-color: #e6f2ff; /* Resalta la fila al pasar el mouse */
+    background-color: #e6f2ff; 
 }
 
 /* --- FORMULARIOS --- */
