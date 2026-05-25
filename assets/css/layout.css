@@ -156,14 +156,18 @@ aside ul {
    MEDIA QUERIES (DISEÑO RESPONSIVO)
    ========================================= */
 
-/* Para Tablets */
+/* --- TABLETS (max-width: 992px) --- */
 @media (max-width: 992px) {
     .contenedor {
-        flex-direction: column;
+        flex-direction: column; /* La bienvenida y el aside se apilan en vertical */
+    }
+    
+    section, aside {
+        width: 100%;
     }
 }
 
-/* Para Móviles */
+/* --- MÓVILES (max-width: 768px) --- */
 @media (max-width: 768px) {
     .top-bar-contenedor {
         flex-direction: column;
@@ -230,12 +234,21 @@ aside ul {
         background-color: rgba(0, 0, 0, 0.1);
     }
 
-    .menu-desplegable:hover .submenu {
-        display: block;
+    .footer-contenedor {
+        flex-direction: column; /* Convierte las columnas horizontales en filas verticales */
+        gap: 30px;
+        padding: 30px 20px;
+    }
 
+    .footer-columna {
+        width: 100%;
+        text-align: center; /* Centra los textos informativos en pantallas chicas */
+    }
+
+    .redes-sociales {
+        justify-content: center; /* Centra los iconos de redes sociales */
     }
 }
-
 
 /* --- CONFIGURACIÓN DEL SUBMENÚ DESPLEGABLE --- */
 
