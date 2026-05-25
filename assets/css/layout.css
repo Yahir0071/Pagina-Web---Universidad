@@ -152,104 +152,6 @@ aside ul {
 }
 
 
-/* =========================================
-   MEDIA QUERIES (DISEÑO RESPONSIVO)
-   ========================================= */
-
-/* --- TABLETS (max-width: 992px) --- */
-@media (max-width: 992px) {
-    .contenedor {
-        flex-direction: column; /* La bienvenida y el aside se apilan en vertical */
-    }
-    
-    section, aside {
-        width: 100%;
-    }
-}
-
-/* --- MÓVILES (max-width: 768px) --- */
-@media (max-width: 768px) {
-    .top-bar-contenedor {
-        flex-direction: column;
-        text-align: center;
-        gap: 5px;
-    }
-
-    .header-contenedor {
-        flex-direction: column;
-        gap: 15px;
-        text-align: center;
-    }
-
-    .logo-contenedor {
-        margin: 0 auto;
-    }
-
-    .logo-img {
-        max-width: 150px;
-    }
-
-    nav {
-        width: 100%;
-    }
-
-    nav ul {
-        flex-direction: column;
-        width: 100%;
-        gap: 0;
-    }
-
-    nav ul li {
-        width: 100%;
-    }
-
-    nav a {
-        display: block;
-        text-align: center;
-        padding: 12px;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-    }
-
-    /* Ajuste para el botón CTA "Solicita asesoría" dentro del menú móvil */
-    nav ul li .btn-cta {
-        display: block;
-        margin: 15px auto 5px auto;
-        width: 80%;
-        border-radius: 25px;
-    }
-
-    /* Si tienes el submenú desplegable de servicios, evita que flote en celulares */
-    .submenu {
-        position: static !important;
-        width: 100%;
-        background-color: #001f42;
-        box-shadow: none;
-        border-top: none;
-        padding: 0;
-    }
-
-    .submenu a {
-        text-align: center;
-        padding: 10px;
-        background-color: rgba(0, 0, 0, 0.1);
-    }
-
-    .footer-contenedor {
-        flex-direction: column; /* Convierte las columnas horizontales en filas verticales */
-        gap: 30px;
-        padding: 30px 20px;
-    }
-
-    .footer-columna {
-        width: 100%;
-        text-align: center; /* Centra los textos informativos en pantallas chicas */
-    }
-
-    .redes-sociales {
-        justify-content: center; /* Centra los iconos de redes sociales */
-    }
-}
-
 /* --- CONFIGURACIÓN DEL SUBMENÚ DESPLEGABLE --- */
 
 /* Asegura que el contenedor padre sea la referencia de posición */
@@ -406,4 +308,156 @@ footer {
     text-align: center;
     color: #666;
     font-size: 0.85em;
+}
+
+.menu-check {
+    display: none; /* Oculta la casilla de verificación siempre */
+}
+
+.menu-icono {
+    display: none; /* Oculta el ícono de las 3 rayitas en PC */
+    font-size: 2em;
+    color: white;
+    cursor: pointer;
+}
+
+
+/* =========================================
+   MEDIA QUERIES (DISEÑO RESPONSIVO)
+   ========================================= */
+
+/* --- TABLETS (max-width: 992px) --- */
+@media (max-width: 992px) {
+    .header-contenedor {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+    .logo-contenedor {
+        margin: 0 auto;
+    }
+    nav {
+        width: 100%;
+    }
+    nav ul {
+        flex-direction: column;
+        width: 100%;
+        gap: 0;
+    }
+    nav ul li {
+        width: 100%;
+    }
+    nav a {
+        display: block;
+        text-align: center;
+        padding: 12px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    
+    /* El submenú deja de flotar en el aire y se integra para tablets */
+    .submenu {
+        position: static !important;
+        width: 100%;
+        background-color: #001f42;
+        box-shadow: none;
+        border-top: none;
+        padding: 0;
+    }
+    .submenu a {
+        text-align: center;
+        padding: 10px;
+        background-color: rgba(0, 0, 0, 0.1);
+    }
+
+    /* Las columnas del cuerpo pasan a apilarse verticalmente */
+    .contenedor {
+        flex-direction: column;
+        gap: 25px;
+    }
+    section, aside {
+        width: 100%;
+    }
+}
+
+/* --- MÓVILES (max-width: 768px) --- */
+@media (max-width: 768px) {
+    .top-bar-contenedor {
+        flex-direction: column;
+        text-align: center;
+        gap: 5px;
+    }
+
+    .header-contenedor {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+
+    .logo-contenedor {
+        margin: 0 auto;
+    }
+
+    .logo-img {
+        max-width: 140px;
+    }
+
+    nav {
+        width: 100%;
+    }
+
+    nav ul {
+        flex-direction: column;
+        width: 100%;
+        gap: 0;
+    }
+
+    nav ul li {
+        width: 100%;
+    }
+
+    nav a {
+        display: block;
+        text-align: center;
+        padding: 12px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    /* Ajuste para el botón CTA "Solicita asesoría" dentro del menú móvil */
+    nav ul li .btn-cta {
+        display: block;
+        margin: 15px auto 5px auto;
+        width: 85%;
+        border-radius: 25px;
+    }
+
+    /* Si tienes el submenú desplegable de servicios, evita que flote en celulares */
+    .submenu {
+        position: static !important;
+        width: 100%;
+        background-color: #001f42;
+        box-shadow: none;
+        border-top: none;
+        padding: 0;
+    }
+
+    .submenu a {
+        text-align: center;
+        padding: 10px;
+        background-color: rgba(0, 0, 0, 0.1);
+    }
+
+    .footer-contenedor {
+        flex-direction: column; /* Convierte las columnas horizontales en filas verticales */
+        gap: 30px;
+        padding: 30px 20px;
+    }
+
+    .footer-columna {
+        width: 100%;
+        text-align: center; /* Centra los textos informativos en pantallas chicas */
+    }
+
+    .redes-sociales {
+        justify-content: center; /* Centra los iconos de redes sociales */
+    }
 }
