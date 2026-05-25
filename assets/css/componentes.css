@@ -498,55 +498,10 @@ input[type="submit"]:hover {
     justify-content: center; /* Centrado horizontalmente */
     margin: 30px 0; /* Espaciado vertical */
 }
-
-/* Tarjeta de medida: bloque vertical estricto */
-.tarjeta-medida-bloque {
-    background: #fff; /* Fondo blanco */
-    border: 1px solid #e0e0e0; /* Borde gris claro */
-    border-radius: 16px; /* Esquinas redondeadas */
-    overflow: hidden; /* Recorta contenido */
-    width: 100%; /* Ancho total */
-    max-width: 350px; /* Ancho máximo ideal */
-    box-shadow: 0 4px 15px rgba(0,0,0,0.06); /* Sombra sutil */
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transiciones suaves */
-    display: block; /* Comportamiento bloque */
-    text-align: left; /* Texto alineado a la izquierda */
-}
-
-/* Efecto hover: tarjeta se eleva */
-.tarjeta-medida-bloque:hover {
-    transform: translateY(-5px); /* Se eleva 5px */
-    box-shadow: 0 12px 24px rgba(0,0,0,0.12); /* Sombra aumentada */
-}
-
-/* Contenedor para imagen isométrica con fondo oscuro */
-.imagen-medida {
-    background-color: #1a1a1a; /* Fondo negro oscuro */
-    padding: 25px 20px; /* Espaciado interno */
-    height: 220px; /* Altura fija */
-    display: flex; /* Flexbox */
-    justify-content: center; /* Centrado horizontal */
-    align-items: center; /* Centrado vertical */
-}
-
-/* Imagen dentro del contenedor */
-.imagen-medida img {
-    max-width: 100%; /* Ancho máximo */
-    max-height: 100%; /* Alto máximo */
-    object-fit: contain; /* Mantiene proporciones */
-}
-
-/* Bloque de contenido (título y descripción) */
-.contenido-medida {
-    padding: 25px 20px; /* Espaciado interno */
-}
-
-/* Título de la medida */
-.contenido-medida h3 {
-    color: #1a1a1a; /* Negro oscuro */
-    font-size: 1.4em; /* Tamaño grande */
-    margin-bottom: 15px; /* Espacio debajo */
-    font-weight: bold; /* Texto en negrita */
+.contenedor-medida-unica .tarjeta-articulo {
+    width: 100%;
+    max-width: 350px; 
+    text-align: left; /* Mantiene el texto alineado a la izquierda por dentro */
 }
 
 /* Subtítulo descriptivo de las medidas */
@@ -585,9 +540,3 @@ input[type="submit"]:hover {
     display: inline-block; /* Comportamiento bloque en línea */
 }
 
-/* Contenedor del botón inferior: centrado */
-.contenedor-accion-central {    
-    display: flex; /* Flexbox */   
-    justify-content: center; /* Centrado horizontal */
-    margin-top: 20px; /* Espacio superior */
-}
