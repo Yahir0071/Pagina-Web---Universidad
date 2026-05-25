@@ -1,528 +1,593 @@
 /* --- BOTONES --- */
+/* Estilo base para botones call-to-action */
 .btn-cta { 
-    background-color: #00a8cc;
-    color: white; 
-    padding: 10px 20px; 
-    border-radius: 25px;
-    border: 2px solid transparent; 
+    background-color: #00a8cc; /* Color azul corporativo de fondo */
+    color: white; /* Texto en blanco */
+    padding: 10px 20px; /* Espaciado interno horizontal */
+    border-radius: 25px; /* Bordes redondeados para efecto moderno */
+    border: 2px solid transparent; /* Borde transparente por defecto */
 }
 
+/* Efecto hover: invierte los colores para interactividad */
 .btn-cta:hover { 
-    background-color: white; 
-    color: #00a8cc; 
-    border: 2px solid #00a8cc; 
+    background-color: white; /* Fondo blanco al pasar el mouse */
+    color: #00a8cc; /* Texto azul */
+    border: 2px solid #00a8cc; /* Borde azul visible */
 }
 
+/* Botón hero: más grande y destacado para secciones principales */
 .btn-hero { 
-    display: inline-block; 
-    background-color: #ffcc00; 
-    color: #000; 
-    font-weight: bold; 
-    padding: 15px 30px; 
-    text-decoration: none; 
-    border-radius: 30px; 
-    font-size: 1.1em; }
+    display: inline-block; /* Permite que el elemento sea un bloque en línea */
+    background-color: #ffcc00; /* Amarillo llamativo de fondo */
+    color: #000; /* Texto negro para contraste */
+    font-weight: bold; /* Texto en negrita */
+    padding: 15px 30px; /* Espaciado más generoso que btn-cta */
+    text-decoration: none; /* Elimina el subrayado en links */
+    border-radius: 30px; /* Bordes más redondeados */
+    font-size: 1.1em; /* Texto un poco más grande */
+}
+/* Efecto hover: oscurece el amarillo */
 .btn-hero:hover { 
-    background-color: #e6b800;
+    background-color: #e6b800; /* Amarillo más oscuro */
 }
 /* --- ANIMACIONES EN BOTONES  --- */
+/* Transiciones suaves para todos los botones */
 .btn-cta, .btn-hero, .btn-promo {
-    transition: all 0.3s ease; 
-    display: inline-block;
+    transition: all 0.3s ease; /* Anima todos los cambios en 0.3 segundos */
+    display: inline-block; /* Permite que sean bloques en línea */
 }
 
+/* Efectos al pasar el mouse: se agranda y añade sombra */
 .btn-cta:hover, .btn-hero:hover, .btn-promo:hover {
-    transform: scale(1.05); 
-    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    transform: scale(1.05); /* Agranda el botón un 5% */
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2); /* Añade sombra para efecto de profundidad */
 }
 
 
 /* --- ELEMENTOS VARIOS --- */
+/* Estilos para elementos de artículos con separadores visuales */
 article { 
-    margin-bottom: 25px; 
-    padding-bottom: 25px; 
-    border-bottom: 1px solid #eee; 
+    margin-bottom: 25px; /* Espacio debajo del artículo */
+    padding-bottom: 25px; /* Espacio interno inferior */
+    border-bottom: 1px solid #eee; /* Línea gris clara separadora */
 }
 
+/* Clase para destacar texto importante dentro del contenido */
 .destacado { 
-    font-size: 1.2em; 
-    color: #004080; 
-    font-weight: bold; 
-    margin-bottom: 15px; 
+    font-size: 1.2em; /* Un poco más grande que el texto normal */
+    color: #004080; /* Azul oscuro corporativo */
+    font-weight: bold; /* Texto en negrita */
+    margin-bottom: 15px; /* Espacio después del texto */
 }
 
 /* --- DISEÑO DE IMAGENES --- */
+/* Imágenes responsivas que se adaptan al ancho del contenedor */
 .img-fluida { 
-    width: 100%; 
-    height: 300px; 
-    object-fit: cover; 
-    border-radius: 8px; 
-    margin: 20px 0; 
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1); 
+    width: 100%; /* Ocupa todo el ancho disponible */
+    height: 300px; /* Altura fija */
+    object-fit: cover; /* Recorta la imagen para mantener proporciones */
+    border-radius: 8px; /* Esquinas ligeramente redondeadas */
+    margin: 20px 0; /* Espaciado vertical */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Sombra sutil */
 }
 
+/* Imagen fluida alternativa: ocupa 50% del ancho */
 .img-fluida2 {
-    width: 50%;
-    height: 300px;
-    display: block;
-    margin: 20px auto;
-    
-    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    width: 50%; /* Mitad del ancho del contenedor */
+    height: 300px; /* Altura fija igual a img-fluida */
+    display: block; /* Se comporta como bloque */
+    margin: 20px auto; /* Centrada horizontalmente */
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2); /* Sombra más pronunciada */
 }
 
 /* --- TABLAS --- */
+/* Estilos base para tablas responsivas */
 table { 
-    width: 100%; 
-    border-collapse: collapse; 
-    margin-top: 20px; 
+    width: 100%; /* Tabla ocupa todo el ancho */
+    border-collapse: collapse; /* Elimina espacios entre bordes */
+    margin-top: 20px; /* Espacio superior */
 }
 
+/* Título descriptivo de la tabla */
 caption { 
-    font-weight: bold; 
-    font-size: 1.4em; 
-    margin-bottom: 15px; 
-    color: #002b5e; 
+    font-weight: bold; /* Texto en negrita */
+    font-size: 1.4em; /* Texto más grande */
+    margin-bottom: 15px; /* Espacio debajo */
+    color: #002b5e; /* Azul corporativo oscuro */
 }
 
+/* Estilos para encabezados y celdas */
 th, td { 
-    border: 1px solid #ccc; 
-    padding: 15px; 
-    text-align: center; 
+    border: 1px solid #ccc; /* Bordes grises claros */
+    padding: 15px; /* Espaciado interno */
+    text-align: center; /* Texto centrado */
 }
 
+/* Encabezado (header) con fondo azul oscuro */
 th { 
-    background-color: #004080; 
-    color: white; 
+    background-color: #004080; /* Fondo azul corporativo */
+    color: white; /* Texto en blanco */
 }
 
+/* Filas pares con fondo gris claro para mejor legibilidad */
 tr:nth-child(even) { 
-    background-color: #f9f9f9; 
+    background-color: #f9f9f9; /* Gris muy claro */
 }
 
+/* Clase especial para notas o información importante dentro de tablas */
 .tabla-nota { 
-    background-color: #b3d9ff; 
-    color: #002b5e; 
-    text-align: center; 
-    font-weight: bold; 
+    background-color: #b3d9ff; /* Azul claro */
+    color: #002b5e; /* Texto azul oscuro */
+    text-align: center; /* Centrado */
+    font-weight: bold; /* Texto en negrita */
 }
 
 /* --- TABLAS RESPONSIVAS --- */
+/* Contenedor con scroll horizontal para tablas en pantallas pequeñas */
 .tabla-responsiva {
-    overflow-x: auto;
-    width: 100%;
-    margin-top: 20px;
+    overflow-x: auto; /* Scroll horizontal si es necesario */
+    width: 100%; /* Ocupa todo el ancho */
+    margin-top: 20px; /* Espacio superior */
 }
 
+/* Transición suave para interactividad */
 tr {
-    transition: background-color 0.2s ease;
+    transition: background-color 0.2s ease; /* Anima cambios de color en 0.2s */
 }
 
+/* Filas pares con fondo claro */
 tr:nth-child(even) { 
-    background-color: #f9f9f9; 
+    background-color: #f9f9f9; /* Gris muy claro */
 }
 
+/* Efecto hover: fila se resalta en azul claro al pasar el mouse */
 tr:hover {
-    background-color: #e6f2ff; /* Resalta la fila al pasar el mouse */
+    background-color: #e6f2ff; /* Azul muy claro para resaltar interactividad */
 }
 
 /* --- FORMULARIOS --- */
+/* Contenedor para agrupar campos relacionados del formulario */
 fieldset { 
-    border: 2px solid #004080; 
-    padding: 25px; 
-    border-radius: 8px; 
-    margin-bottom: 25px; 
-    background-color: #fafcfd; 
+    border: 2px solid #004080; /* Borde azul corporativo */
+    padding: 25px; /* Espaciado interno generoso */
+    border-radius: 8px; /* Esquinas redondeadas */
+    margin-bottom: 25px; /* Espacio entre groups */
+    background-color: #fafcfd; /* Fondo blanco muy claro */
 }
 
+/* Etiqueta del fieldset (título de la sección) */
 legend { 
-    background-color: #004080; 
-    color: white; 
-    padding: 5px 15px; 
-    border-radius: 4px; 
-    font-weight: bold; 
+    background-color: #004080; /* Fondo azul corporativo */
+    color: white; /* Texto blanco */
+    padding: 5px 15px; /* Espaciado interno */
+    border-radius: 4px; /* Esquinas redondeadas */
+    font-weight: bold; /* Texto en negrita */
 }
 
+/* Etiquetas de campos individuales */
 label { 
-    display: block; 
-    margin-bottom: 8px; 
-    font-weight: bold; 
-    color: #002b5e; 
+    display: block; /* Cada label en su propia línea */
+    margin-bottom: 8px; /* Espacio debajo del label */
+    font-weight: bold; /* Texto en negrita */
+    color: #002b5e; /* Azul oscuro corporativo */
 }
 
+/* Campos de entrada de texto, email, fecha, selects y textareas */
 input[type="text"], input[type="email"], input[type="date"], select, textarea { 
-    width: 100%; 
-    padding: 12px; 
-    margin-bottom: 20px; 
-    border: 1px solid #ccc; 
-    border-radius: 4px; 
-    font-family: inherit; 
+    width: 100%; /* Ocupan el ancho total del contenedor */
+    padding: 12px; /* Espaciado interno confortable */
+    margin-bottom: 20px; /* Espacio vertical entre campos */
+    border: 1px solid #ccc; /* Borde gris claro */
+    border-radius: 4px; /* Esquinas ligeramente redondeadas */
+    font-family: inherit; /* Hereda la fuente del documento */
 }
 
 /* --- FORMULARIOS ESTILIZADOS  --- */
+/* Efecto focus: resalta el campo activo con borde azul y sombra */
 input[type="text"]:focus, input[type="email"]:focus, select:focus, textarea:focus {
-    outline: none;
-    border-color: #00a8cc;
-    box-shadow: 0 0 8px rgba(0, 168, 204, 0.3);
+    outline: none; /* Elimina el outline del navegador */
+    border-color: #00a8cc; /* Borde azul corporativo */
+    box-shadow: 0 0 8px rgba(0, 168, 204, 0.3); /* Sombra azul sutil */
 }
 
+/* Textarea: permite redimensionar solo en vertical */
 textarea { 
-    resize: vertical; 
+    resize: vertical; /* Solo permite cambiar altura */
 }
 
+/* Contenedor flex para checkboxes e inputs de radio */
 .checkbox-group { 
-    display: flex; 
-    align-items: center; 
-    gap: 10px; 
-    margin-bottom: 20px; 
+    display: flex; /* Elementos en línea */
+    align-items: center; /* Alineados al centro verticalmente */
+    gap: 10px; /* Espacio entre checkbox y label */
+    margin-bottom: 20px; /* Espacio debajo del grupo */
 }
 
+/* Label dentro de checkbox-group: sin espaciado extra */
 .checkbox-group label {
-     margin-bottom: 0; 
-     font-weight: normal; 
+     margin-bottom: 0; /* No hay espaciado adicional */
+     font-weight: normal; /* Peso de fuente normal */
 }
 
+/* Botón de envío del formulario */
 input[type="submit"] { 
-    background-color: #00a8cc; 
-    color: white; 
-    font-weight: bold; 
-    border: none; 
-    cursor: pointer; 
-    font-size: 1.2em; 
-    padding: 15px; 
-    border-radius: 5px; 
-    transition: background 0.3s; 
+    background-color: #00a8cc; /* Fondo azul corporativo */
+    color: white; /* Texto blanco */
+    font-weight: bold; /* Texto en negrita */
+    border: none; /* Sin bordes */
+    cursor: pointer; /* Cursor tipo mano */
+    font-size: 1.2em; /* Texto más grande */
+    padding: 15px; /* Espaciado interno generoso */
+    border-radius: 5px; /* Esquinas redondeadas */
+    transition: background 0.3s; /* Transición suave al cambiar color */
 }
 
+/* Efecto hover: oscurece el botón */
 input[type="submit"]:hover { 
-    background-color: #008ba3;
+    background-color: #008ba3; /* Azul más oscuro */
 }
 
+/* Etiqueta descriptiva para inputs de rango (sliders) */
 .rango-valor { 
-    margin-bottom: 20px; 
-    font-weight: bold; 
-    color: #00a8cc; 
+    margin-bottom: 20px; /* Espacio debajo */
+    font-weight: bold; /* Texto en negrita */
+    color: #00a8cc; /* Azul corporativo */
 }
 
 /* --- ACORDEÓN (FAQ) --- */
+/* Contenedor para cada pregunta/respuesta frecuente */
 .faq-item {
-    margin-bottom: 10px;
+    margin-bottom: 10px; /* Espacio entre items */
 }
 
+/* Estilos para la pregunta (clickeable) */
 .faq-pregunta {
-    font-size: 1.3em;
-    font-weight: bold;
-    color: #002b5e;
-    cursor: pointer;
-    padding-bottom: 10px;
+    font-size: 1.3em; /* Texto más grande que el cuerpo */
+    font-weight: bold; /* Texto en negrita */
+    color: #002b5e; /* Azul oscuro corporativo */
+    cursor: pointer; /* Indica que es clickeable */
+    padding-bottom: 10px; /* Espacio interior inferior */
 }
 
+/* Párrafos dentro de items FAQ */
 .faq-item p {
-    margin-top: 10px;
+    margin-top: 10px; /* Espacio superior */
 }
 
+/* Listas dentro de items FAQ */
 .faq-item ul {
-    margin-top: 10px;
-    margin-left: 25px;
+    margin-top: 10px; /* Espacio superior */
+    margin-left: 25px; /* Indentación para visuailizar jerarquía */
 }
 
 /* --- CLASES DE UTILIDAD Y TEXTO --- */
+/* Leyenda descriptiva debajo de imágenes */
 .leyenda-imagen {
-    text-align: center;
-    color: #555;
-    font-style: italic;
-    margin-bottom: 20px;
+    text-align: center; /* Centrado */
+    color: #555; /* Gris medio */
+    font-style: italic; /* Texto en cursiva */
+    margin-bottom: 20px; /* Espacio debajo */
 }
 
+/* Línea divisoria sutil entre secciones */
 .separador-claro {
-    border: 1px solid #eee;
-    margin-bottom: 25px;
+    border: 1px solid #eee; /* Borde gris muy claro */
+    margin-bottom: 25px; /* Espacio debajo */
 }
 
+/* Clase auxiliar para añadir espaciado inferior */
 .espaciado-inferior {
-    margin-bottom: 20px;
+    margin-bottom: 20px; /* Espaciado inferior */
 }
 
+/* Botón que ocupa todo el ancho de su contenedor */
 .btn-bloque {
-    display: block;
-    text-align: center;
+    display: block; /* Comportamiento de bloque */
+    text-align: center; /* Texto centrado */
 }
 
 
 /* --- PROMOCIONES --- */
+/* Contenedor grid para mostrar promociones en filas de 3 columnas */
 .contenedor-promos {
-    display: grid;
-    grid-template-columns: repeat(3, 300px);
-    justify-content: center;
-    gap: 50px;
+    display: grid; /* Grid layout */
+    grid-template-columns: repeat(3, 300px); /* 3 columnas de 300px cada una */
+    justify-content: center; /* Centrado horizontalmente */
+    gap: 50px; /* Espaciado entre tarjetas */
 }
 
+/* Tarjeta individual de promoción */
 .card-promo {
-    background: #f1f1f1;
-    border-radius: 15px;
-    overflow: hidden;
-    width: 100%;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    background: #f1f1f1; /* Fondo gris claro */
+    border-radius: 15px; /* Esquinas redondeadas */
+    overflow: hidden; /* Recorta contenido que sobresale */
+    width: 100%; /* Ocupa todo el ancho */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1); /* Sombra sutil */
 }
+
+/* Contenedor similar para tarjetas de almacén */
 .contenedor-almacen{
-    display: grid;
-    grid-template-columns: repeat(3, 350px);
-    justify-content: center;
-    gap: 50px;
-    padding: 30px;
+    display: grid; /* Grid layout */
+    grid-template-columns: repeat(3, 350px); /* 3 columnas de 350px (más anchas) */
+    justify-content: center; /* Centrado */
+    gap: 50px; /* Espaciado entre tarjetas */
+    padding: 30px; /* Espaciado interno */
 }
 
+/* Imagen dentro de la tarjeta de promoción */
 .card-promo img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
+    width: 100%; /* Ocupa todo el ancho */
+    height: 200px; /* Altura fija */
+    object-fit: cover; /* Recorta manteniendo proporciones */
 }
 
+/* Contenedor del contenido (texto y botones) */
 .card-contenido {
-    padding: 15px;
-    text-align: center;
+    padding: 15px; /* Espaciado interno */
+    text-align: center; /* Texto centrado */
 }
 
+/* Párrafos dentro del contenido de la tarjeta */
 .card-contenido p {
-    font-size: 15px;
-    margin-bottom: 15px;
+    font-size: 15px; /* Tamaño de fuente */
+    margin-bottom: 15px; /* Espacio debajo */
 }
 
+/* Botón de promoción: amarillo llamativo */
 .btn-promo {
-    display: inline-block;
-    background: #ffe600;
-    color: black;
-    padding: 10px 20px;
-    border-radius: 25px;
-    text-decoration: none;
-    font-weight: bold;
-    transition: background 0.3s;
+    display: inline-block; /* Bloque en línea */
+    background: #ffe600; /* Amarillo brillante */
+    color: black; /* Texto negro */
+    padding: 10px 20px; /* Espaciado interno */
+    border-radius: 25px; /* Bordes redondeados */
+    text-decoration: none; /* Sin subrayado */
+    font-weight: bold; /* Texto en negrita */
+    transition: background 0.3s; /* Transición suave */
 }
 
+/* Efecto hover: oscurece el amarillo */
 .btn-promo:hover {
-    background: #ffd000;
+    background: #ffd000; /* Amarillo más oscuro */
 }
 
 /* --- CSS GRID PARA BLOG, TECNOLOGÍA Y PROMOS --- */
+/* Grillas responsivas para diferentes secciones del sitio */
 .grid-arquitectura, 
 .grid-articulos, 
 .contenedor-promos, 
 .contenedor-almacen {
-    display: grid;
-    /* auto-fit crea tantas columnas como quepan sin romperse */
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 30px;
-    margin-top: 25px;
-    padding: 10px 0;
+    display: grid; /* Grid layout */
+    /* auto-fit: crea tantas columnas como quepan en la pantalla */
+    /* minmax(280px, 1fr): mínimo 280px, máximo 1 fracción */
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Columnas responsivas */
+    gap: 30px; /* Espaciado entre elementos */
+    margin-top: 25px; /* Espacio superior */
+    padding: 10px 0; /* Espaciado vertical */
 }
 
 /* --- TARJETAS CON EFECTOS  --- */
+/* Estilos base para tarjetas reutilizables */
 .tarjeta-caracteristica, 
 .tarjeta-articulo, 
 .card-promo {
-    background: #fff;
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    display: flex;
-    flex-direction: column;
+    background: #fff; /* Fondo blanco */
+    border-radius: 10px; /* Esquinas redondeadas */
+    overflow: hidden; /* Recorta contenido que sobresale */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08); /* Sombra sutil */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transiciones suaves */
+    display: flex; /* Flexbox */
+    flex-direction: column; /* Elementos apilados verticalmente */
 }
 
+/* Efecto hover: tarjeta se eleva y aumenta la sombra */
 .tarjeta-caracteristica:hover, 
 .tarjeta-articulo:hover, 
 .card-promo:hover {
-    transform: translateY(-8px); /* La tarjeta "flota" hacia arriba */
-    box-shadow: 0 15px 25px rgba(0,0,0,0.15);
+    transform: translateY(-8px); /* La tarjeta "flota" hacia arriba 8px */
+    box-shadow: 0 15px 25px rgba(0,0,0,0.15); /* Sombra más pronunciada */
 }
 
-/* Asegurar que las imágenes dentro de tarjetas no se deformen */
+/* Imágenes dentro de tarjetas: mantienen proporciones sin deformación */
 .tarjeta-articulo img, 
 .card-promo img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
+    width: 100%; /* Ocupa todo el ancho */
+    height: 200px; /* Altura fija */
+    object-fit: cover; /* Recorta sin deformar */
 }
 
+/* Cuerpo de la tarjeta: contiene el texto y acciones */
 .tarjeta-cuerpo, .card-contenido {
-    padding: 20px;
-    flex-grow: 1; 
+    padding: 20px; /* Espaciado interno */
+    flex-grow: 1; /* Crece para llenar el espacio disponible */
 }
 
 /* --- SECCIÓN DE BENEFICIOS (MINIBODEGA) --- */
 
+/* Texto descriptivo centrado antes de la grid de beneficios */
 .destacado-centro {
-    text-align: center;
-    font-size: 1.1em;
-    color: #555;
-    margin-bottom: 40px;
+    text-align: center; /* Texto centrado */
+    font-size: 1.1em; /* Ligeramente más grande */
+    color: #555; /* Gris medio */
+    margin-bottom: 40px; /* Espaciado generoso debajo */
 }
 
-/* Contenedor principal con CSS Grid */
+/* Contenedor principal con CSS Grid responsivo */
 .grid-beneficios {
-    display: grid;
-    /* auto-fit calcula cuántas columnas de mínimo 300px caben en la pantalla de forma fluida */
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
-    padding: 10px 0;
+    display: grid; /* Grid layout */
+    /* auto-fit calcula dinámicamente cuántas columnas caben en la pantalla */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Mínimo 300px, máximo 1 fracción */
+    gap: 30px; /* Espaciado entre tarjetas */
+    padding: 10px 0; /* Espaciado vertical */
 }
 
-/* Tarjeta estructurada con Flexbox */
+/* Tarjeta individual de beneficio con Flexbox */
 .tarjeta-beneficio {
-    background-color: #fff;
-    border-radius: 12px;
-    overflow: hidden;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
+    background-color: #fff; /* Fondo blanco */
+    border-radius: 12px; /* Esquinas redondeadas */
+    overflow: hidden; /* Recorta contenido que sobresale */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06); /* Sombra sutil */
     
-    /* Flexbox vertical para alinear la imagen arriba y el texto abajo */
+    /* Flexbox vertical para distribuir imagen arriba y texto abajo */
     display: flex;
-    flex-direction: column;
+    flex-direction: column; /* Apila elementos verticalmente */
     
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transiciones suaves */
 }
 
-/* Efecto hover interactivo idéntico al de tus otras promos */
+/* Efecto hover: tarjeta flota hacia arriba */
 .tarjeta-beneficio:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12);
+    transform: translateY(-8px); /* Se eleva 8px */
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12); /* Sombra más pronunciada */
 }
 
-/* Contenedor de la imagen */
+/* Contenedor para la imagen dentro de la tarjeta */
 .imagen-beneficio {
-    width: 100%;
-    height: 280px; /* Altura fija para que todas las fotos queden perfectamente alineadas */
-    overflow: hidden;
+    width: 100%; /* Ancho total */
+    height: 280px; /* Altura fija para alineación perfecta */
+    overflow: hidden; /* Recorta imagen que sobresale */
 }
 
+/* Imagen dentro del contenedor */
 .imagen-beneficio img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* Evita que la imagen se estire o se deforme */
+    width: 100%; /* Ancho total */
+    height: 100%; /* Alto total */
+    object-fit: cover; /* Recorta sin deformar */
 }
 
-/* Caja de texto inferior (Fondo crema sutil del diseño original) */
+/* Sección de texto con fondo crema elegante */
 .cuerpo-beneficio {
-    background-color: #fefbe9; /* Tono crema claro muy elegante */
-    padding: 25px 20px;
-    text-align: center;
-    border-top: 1px solid #f5f0cd;
+    background-color: #fefbe9; /* Tono crema claro y elegante */
+    padding: 25px 20px; /* Espaciado interno */
+    text-align: center; /* Texto centrado */
+    border-top: 1px solid #f5f0cd; /* Línea separadora sutil */
     
-    /* Flexbox nos asegura que el texto se centre verticalmente si hay variaciones de tamaño */
+    /* Flexbox para centrar verticalmente el contenido */
     display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-grow: 1; 
+    align-items: center; /* Centrado vertical */
+    justify-content: center; /* Centrado horizontal */
+    flex-grow: 1; /* Crece para llenar espacio */
 }
 
+/* Párrafos dentro del cuerpo */
 .cuerpo-beneficio p {
-    font-size: 0.98em;
-    color: #444;
-    line-height: 1.5; /* Altura de línea adaptada para bloques de lectura cortos */
+    font-size: 0.98em; /* Tamaño ligeramente más pequeño */
+    color: #444; /* Gris oscuro */
+    line-height: 1.5; /* Altura de línea legible */
 }
 
 /* --- SECCIÓN MEDIDA ÚNICA CORREGIDA (APILADO VERTICAL) --- */
 
+/* Contenedor de la sección de medidas */
 .medidas-minibodega {
-    margin-top: 60px;
-    padding-top: 40px;
-    border-top: 1px solid #eee;
-    text-align: center;
+    margin-top: 60px; /* Espacio superior generoso */
+    padding-top: 40px; /* Espaciado interno superior */
+    border-top: 1px solid #eee; /* Línea separadora */
+    text-align: center; /* Contenido centrado */
 }
 
+/* Encabezado de la sección */
 .medidas-minibodega h2 {
-    color: #002b5e;
-    font-size: 1.8em;
-    margin-bottom: 30px;
+    color: #002b5e; /* Azul oscuro corporativo */
+    font-size: 1.8em; /* Tamaño grande */
+    margin-bottom: 30px; /* Espacio debajo */
 }
 
+/* Contenedor flex para centrar la tarjeta de medida */
 .contenedor-medida-unica {
-    display: flex;
-    justify-content: center;
-    margin: 30px 0;
+    display: flex; /* Flexbox */
+    justify-content: center; /* Centrado horizontalmente */
+    margin: 30px 0; /* Espaciado vertical */
 }
 
-/* Forzamos que la tarjeta sea un bloque vertical estricto */
+/* Tarjeta de medida: bloque vertical estricto */
 .tarjeta-medida-bloque {
-    background: #fff;
-    border: 1px solid #e0e0e0;
-    border-radius: 16px;
-    overflow: hidden;
-    width: 100%;
-    max-width: 350px; /* Ancho ideal idéntico a tus otras tarjetas */
-    box-shadow: 0 4px 15px rgba(0,0,0,0.06);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    display: block; /* Evita que herede flex-direction de otras clases */
-    text-align: left;
+    background: #fff; /* Fondo blanco */
+    border: 1px solid #e0e0e0; /* Borde gris claro */
+    border-radius: 16px; /* Esquinas redondeadas */
+    overflow: hidden; /* Recorta contenido */
+    width: 100%; /* Ancho total */
+    max-width: 350px; /* Ancho máximo ideal */
+    box-shadow: 0 4px 15px rgba(0,0,0,0.06); /* Sombra sutil */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transiciones suaves */
+    display: block; /* Comportamiento bloque */
+    text-align: left; /* Texto alineado a la izquierda */
 }
 
+/* Efecto hover: tarjeta se eleva */
 .tarjeta-medida-bloque:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 12px 24px rgba(0,0,0,0.12);
+    transform: translateY(-5px); /* Se eleva 5px */
+    box-shadow: 0 12px 24px rgba(0,0,0,0.12); /* Sombra aumentada */
 }
 
-/* Contenedor de la imagen isométrica con fondo oscuro */
+/* Contenedor para imagen isométrica con fondo oscuro */
 .imagen-medida {
-    background-color: #1a1a1a;
-    padding: 25px 20px;
-    height: 220px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    background-color: #1a1a1a; /* Fondo negro oscuro */
+    padding: 25px 20px; /* Espaciado interno */
+    height: 220px; /* Altura fija */
+    display: flex; /* Flexbox */
+    justify-content: center; /* Centrado horizontal */
+    align-items: center; /* Centrado vertical */
 }
 
+/* Imagen dentro del contenedor */
 .imagen-medida img {
-    max-width: 100%;
-    max-height: 100%;
-    object-fit: contain;
+    max-width: 100%; /* Ancho máximo */
+    max-height: 100%; /* Alto máximo */
+    object-fit: contain; /* Mantiene proporciones */
 }
 
-/* Bloque de contenido */
+/* Bloque de contenido (título y descripción) */
 .contenido-medida {
-    padding: 25px 20px;
+    padding: 25px 20px; /* Espaciado interno */
 }
 
+/* Título de la medida */
 .contenido-medida h3 {
-    color: #1a1a1a;
-    font-size: 1.4em;
-    margin-bottom: 15px;
-    font-weight: bold;
+    color: #1a1a1a; /* Negro oscuro */
+    font-size: 1.4em; /* Tamaño grande */
+    margin-bottom: 15px; /* Espacio debajo */
+    font-weight: bold; /* Texto en negrita */
 }
 
+/* Subtítulo descriptivo de las medidas */
 .descripcion-medida h4 {
-    color: #777;
-    font-size: 0.85em;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-    margin-bottom: 6px;
+    color: #777; /* Gris medio */
+    font-size: 0.85em; /* Texto pequeño */
+    text-transform: uppercase; /* Mayúsculas */
+    letter-spacing: 0.5px; /* Espaciado entre letras */
+    margin-bottom: 6px; /* Espacio debajo */
 }
 
+/* Párrafos descriptivos */
 .descripcion-medida p {
-    font-size: 0.95em;
-    color: #444;
-    line-height: 1.5;
+    font-size: 0.95em; /* Tamaño pequeño */
+    color: #444; /* Gris oscuro */
+    line-height: 1.5; /* Altura de línea legible */    
     margin-bottom: 20px; /* Espacio antes de la dimensión */
 }
 
 /* Estilo para la dimensión colocada abajo */
-.dimension {
-    font-size: 0.9em;
-    color: #00a8cc; /* Celeste corporativo de SmartWare para resaltar */
-    font-weight: bold;
-    border-top: 1px dashed #eee;
-    padding-top: 15px;
-    margin: 0;
-    display: flex;
-    align-items: center;
-    gap: 6px;
+.dimension {    
+    font-size: 0.9em; /* Texto pequeño */    
+    color: #00a8cc; /* Azul corporativo para resaltar */   
+    font-weight: bold; /* Texto en negrita */    
+    border-top: 1px dashed #eee; /* Línea punteada separadora */    
+    padding-top: 15px; /* Espacio superior */    
+    margin: 0; /* Sin margen */    
+    display: flex; /* Flexbox para alinear */    
+    align-items: center; /* Alineación vertical */    
+    gap: 6px; /* Espaciado entre elementos */
 }
 
-.icono-escala {
-    transform: rotate(-45deg);
-    display: inline-block;
+/* Icono de escala para medidas (rotado 45 grados) */
+.icono-escala {    
+    transform: rotate(-45deg); /* Rotación de -45 grados */    
+    display: inline-block; /* Comportamiento bloque en línea */
 }
 
-/* Contenedor del botón inferior */
-.contenedor-accion-central {
-    display: flex;
-    justify-content: center;
-    margin-top: 20px;
+/* Contenedor del botón inferior: centrado */
+.contenedor-accion-central {    
+    display: flex; /* Flexbox */   
+    justify-content: center; /* Centrado horizontal */
+    margin-top: 20px; /* Espacio superior */
 }
