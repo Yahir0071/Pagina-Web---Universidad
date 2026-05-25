@@ -24,22 +24,18 @@ main {
     width: 100%;
 }
 
-footer {
-    grid-area: footer;
-}
-
 
 /* --- BARRA SUPERIOR E INFO --- */
 .top-bar {
     grid-area: topbar;
     width: 100%;
-    background-color: #ffcc00; /* El fondo amarillo ahora sí va de extremo a extremo */
+    background-color: #ffcc00;
 }
 
 .top-bar-contenedor {
-    display: flex;                  
-    justify-content: space-between; 
-    align-items: center;            
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     max-width: 1400px;
     margin: 0 auto;
     padding: 8px 20px;
@@ -75,30 +71,29 @@ header {
     text-decoration: none;
 }
 
+.logo-contenedor {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: auto;
+}
+
 /* Control del tamaño del nuevo logo (Limpio, sin display flex aquí) */
 .logo-img {
-    /* CLAVE: Le damos un ancho máximo fijo desde el inicio para que NUNCA 
-       pueda superar su tamaño real, sin importar lo que haga el contenedor */
-    max-width: 180px; 
+    max-width: 180px;
     width: 100%;
     height: auto;
     display: block;
     object-fit: contain;
 }
 
-.logo-contenedor {
+/* --- NAVEGACIÓN --- */
+nav ul {
+    list-style-type: none;
     display: flex;
     align-items: center;
-    width: auto; /* Dejamos que el contenedor se adapte al contenido */
-}
-
-/* --- NAVEGACIÓN (¡MANTENER!) --- */
-nav ul {
-    list-style-type: none; 
-    display: flex; 
-    align-items: center; 
-    gap: 15px; /* Reducimos ligeramente a 15px para dar más espacio a los textos */
-    flex-wrap: wrap; /* Permite que el menú sea flexible */
+    gap: 15px;
+    flex-wrap: wrap;
     padding: 0;
     margin: 0;
 }
@@ -156,14 +151,6 @@ aside ul {
     margin-top: 10px;
 }
 
-/* --- FOOTER --- */
-footer {
-    background-color: #1a1a1a;
-    color: white;
-    text-align: center;
-    padding: 30px;
-    margin-top: 50px;
-}
 
 /* =========================================
    MEDIA QUERIES (DISEÑO RESPONSIVO)
@@ -178,63 +165,77 @@ footer {
 
 /* Para Móviles */
 @media (max-width: 768px) {
-    .top-bar {
+    .top-bar-contenedor {
         flex-direction: column;
         text-align: center;
         gap: 5px;
     }
 
-    nav {
-        width: 100%; /* El contenedor de navegación ocupa todo el ancho */
-    }
-
-    nav ul {
-        flex-direction: column; /* ¡Magia de Flexbox! Los enlaces se apilan uno debajo del otro */
-        width: 100%;
-        gap: 0; /* Quitamos el espacio lateral */
-    }
-
-    nav ul li {
-        width: 100%; /* Cada ítem toma toda la fila */
-    }
-
-    nav a {
-        display: block; /* Hace que todo el ancho sea clickeable */
-        text-align: center;
-        padding: 12px;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* Separador sutil */
-    }
-
-    /* Ajuste para el botón CTA "Solicita asesoría" dentro del menú móvil */
-    nav ul li .btn-cta {
-        display: block;
-        margin: 15px auto 5px auto; /* Lo centra y le da aire arriba y abajo */
-        width: 80%; /* No se estira al 100% para que mantenga forma de botón */
-        border-radius: 25px;
-    }
-    
-    /* Si tienes el submenú desplegable de servicios, evita que flote en celulares */
-    .submenu {
-        position: static !important; 
-        width: 100%;
-        box-shadow: none;
-    }
-
-    .logo-contenedor {
-        margin: 0 auto; /* Centra el bloque del logo */
-    }
-
-    .logo-img {
-        max-width: 150px;
-    }
-    
-    /* Espacio extra para separar el logo centrado del menú que viene abajo */
     .header-contenedor {
         flex-direction: column;
         gap: 15px;
         text-align: center;
     }
+
+    .logo-contenedor {
+        margin: 0 auto;
+    }
+
+    .logo-img {
+        max-width: 150px;
+    }
+
+    nav {
+        width: 100%;
+    }
+
+    nav ul {
+        flex-direction: column;
+        width: 100%;
+        gap: 0;
+    }
+
+    nav ul li {
+        width: 100%;
+    }
+
+    nav a {
+        display: block;
+        text-align: center;
+        padding: 12px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    /* Ajuste para el botón CTA "Solicita asesoría" dentro del menú móvil */
+    nav ul li .btn-cta {
+        display: block;
+        margin: 15px auto 5px auto;
+        width: 80%;
+        border-radius: 25px;
+    }
+
+    /* Si tienes el submenú desplegable de servicios, evita que flote en celulares */
+    .submenu {
+        position: static !important; 
+        width: 100%;
+        background-color: #001f42; 
+        box-shadow: none;
+        border-top: none;
+        padding: 0;
+    }
+
+    .submenu a {
+        text-align: center;
+        padding: 10px;
+        background-color: rgba(0, 0, 0, 0.1);
+    }
+
+    .menu-desplegable:hover .submenu {
+        display: block;
+
 }
+
+
 
 /* --- CONFIGURACIÓN DEL SUBMENÚ DESPLEGABLE --- */
 
@@ -248,17 +249,13 @@ footer {
     display: none;
     position: absolute;
     top: 100%;
-    /* Se despliega justo debajo del botón Servicios */
     left: 0;
     background-color: #002b5e;
-    /* Mismo color azul oscuro del header */
     min-width: 220px;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
     border-radius: 0 0 4px 4px;
     border-top: 3px solid #00a8cc;
-    /* Línea celeste para hacer juego con el header */
     z-index: 100;
-    /* Asegura que flote por encima del contenido/Hero */
     list-style: none;
     padding: 10px 0;
 }
@@ -267,7 +264,6 @@ footer {
 .submenu li {
     width: 100%;
     line-height: 1.2;
-    /* Ajuste de línea para que no sea tan alto como el global */
 }
 
 /* Estilos para los enlaces dentro del submenú */
@@ -291,47 +287,25 @@ footer {
     background-color: #004080;
     border-radius: 0;
     color: #00a8cc;
-    /* El texto cambia a celeste al pasar el mouse */
 }
 
-/* --- TRUCO CLAVE: Mostrar el submenú al pasar el cursor por el elemento padre --- */
 .menu-desplegable:hover .submenu {
     display: block;
 }
 
 
-/* --- AJUSTE RESPONSIVO EN MÓVILES (Media Query max-width: 768px) --- */
-/* Añade esto dentro de tu bloque @media (max-width: 768px) existente para que no se rompa en celulares */
-@media (max-width: 768px) {
-    .submenu {
-        position: static;
-        /* En celulares es mejor que empuje el contenido hacia abajo en vez de flotar */
-        width: 100%;
-        background-color: #001f42;
-        /* Un tono un poco más oscuro para diferenciarlo */
-        box-shadow: none;
-        border-top: none;
-        padding: 0;
-    }
-
-    .menu-desplegable:hover .submenu {
-        display: block;
-    }
-
-    .submenu a {
-        text-align: center;
-        padding: 10px;
-        background-color: rgba(0, 0, 0, 0.1);
-    }
-}
-
-/* --- CONFIGURACIÓN DE COLUMNAS DEL FOOTER --- */
+/* --- FOOTER --- */
 footer {
+    grid-area: footer;
     background-color: #1a1a1a;
     color: white;
+    text-align: center;
     padding: 40px 0 20px 0;
     margin-top: 50px;
 }
+
+
+/* --- CONFIGURACIÓN DE COLUMNAS DEL FOOTER --- */
 
 .footer-contenedor {
     max-width: 1400px;
@@ -339,9 +313,8 @@ footer {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
+    padding: 40px 20px 20px 20px;
     gap: 20px;
-    padding: 0 20px;
-    flex-wrap: wrap;
 }
 
 .footer-columna {
