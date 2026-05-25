@@ -1,125 +1,165 @@
+/* ====================
+   GRID LAYOUT MAESTRO  
+   ==================== */
+body {
+    display: grid;
+    /* Creamos 4 filas: las barras se adaptan solas (auto) y el main toma todo el espacio sobrante (1fr) */
+    grid-template-rows: auto auto 1fr auto;
+
+    /* Le ponemos nombre a cada espacio para ordenarlo fácilmente */
+    grid-template-areas:
+        "topbar"
+        "header"
+        "main"
+        "footer";
+
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+/* Asignamos cada etiqueta HTML a su fila correspondiente del Grid */
+.top-bar {
+    grid-area: topbar;
+}
+
+header {
+    grid-area: header;
+}
+
+main {
+    grid-area: main;
+    width: 100%;
+}
+
+footer {
+    grid-area: footer;
+}
+
+
+
 /* --- BARRA SUPERIOR E INFO --- */
-.top-bar { 
-    background-color: #ffcc00; 
-    color: #000; 
-    font-weight: bold; 
-    padding: 8px 20px; 
-    display: flex; 
-    justify-content: space-between; 
-    max-width: 1400px; 
-    margin: 0 auto; 
-    font-size: 0.9em; 
+.top-bar {
+    background-color: #ffcc00;
+    color: #000;
+    font-weight: bold;
+    padding: 8px 20px;
+    display: flex;
+    justify-content: space-between;
+    max-width: 1400px;
+    margin: 0 auto;
+    font-size: 0.9em;
 }
 
 /* --- CABECERA Y NAVEGACIÓN --- */
-header { 
-    background-color: #002b5e; 
-    color: white; 
-    border-bottom: 5px solid #00a8cc; 
+header {
+    background-color: #002b5e;
+    color: white;
+    border-bottom: 5px solid #00a8cc;
 }
 
-.header-contenedor { 
-    max-width: 1400px; 
+.header-contenedor {
+    max-width: 1400px;
     width: 100%;
-    margin: 0 auto; 
-    display: flex; 
-    justify-content: space-between; 
-    align-items: center; 
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     padding: 15px 20px;
     flex-wrap: wrap;
 }
 
 /* --- LOGO  --- */
-.logo { 
-    display: flex; 
-    align-items: center; 
-    text-decoration: none; 
+.logo {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
 }
 
 /* Control del tamaño del nuevo logo (Limpio, sin display flex aquí) */
 .logo-img {
     height: 100%;
-    width: 100%; 
+    width: 100%;
     display: block;
     object-fit: contain;
 }
 
 .logo-contenedor {
     display: flex;
-    align-items: center;    
-    justify-content: center; 
-    height: 50px;           
-    width: 180px;      
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    width: 180px;
 }
 
 /* --- NAVEGACIÓN (¡MANTENER!) --- */
-nav ul { 
-    list-style-type: none; 
-    display: flex; 
-    align-items: center; 
-    gap: 20px; 
+nav ul {
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    gap: 20px;
 }
 
-nav a { 
-    color: white; 
-    text-decoration: none; 
-    font-weight: bold; 
-    padding: 8px 12px; 
-    transition: background 0.3s; 
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 8px 12px;
+    transition: background 0.3s;
 }
 
-nav a:hover { 
-    background-color: #004080; 
-    border-radius: 4px; 
+nav a:hover {
+    background-color: #004080;
+    border-radius: 4px;
 }
 
 /* --- CONTENEDOR PRINCIPAL FIJO --- */
-.contenedor { 
-    display: flex; 
-    max-width: 1400px; 
+.contenedor {
+    display: flex;
+    max-width: 1400px;
     width: 100%;
-    margin: 30px auto; 
-    gap: 30px; 
-    padding: 0 20px; 
+    margin: 30px auto;
+    gap: 30px;
+    padding: 0 20px;
 }
 
-section { 
-    flex: 3; 
-    background-color: white; 
+section {
+    flex: 3;
+    background-color: white;
     padding: 30px;
-    border-radius: 8px; 
-    border: 1px solid #ddd; 
-    box-shadow: 0 4px 6px rgba(0,0,0,0.05); 
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
 }
 
 /* ---BARRA LATERAL --- */
-aside { 
-    flex: 1; 
-    background-color: #e6f2ff; 
-    padding: 25px; 
-    border-radius: 8px; 
-    border: 1px solid #b3d9ff; 
+aside {
+    flex: 1;
+    background-color: #e6f2ff;
+    padding: 25px;
+    border-radius: 8px;
+    border: 1px solid #b3d9ff;
     min-width: 250px;
 }
 
-aside hr { 
-    margin: 15px 0; 
-    border: 0; 
+aside hr {
+    margin: 15px 0;
+    border: 0;
     border-top: 1px solid #b3d9ff;
- }
- 
-aside ul { 
-    margin-left: 20px; 
-    margin-top: 10px; 
+}
+
+aside ul {
+    margin-left: 20px;
+    margin-top: 10px;
 }
 
 /* --- FOOTER --- */
-footer { 
-    background-color: #1a1a1a; 
-    color: white; 
-    text-align: center; 
-    padding: 30px; 
-    margin-top: 50px; 
+footer {
+    background-color: #1a1a1a;
+    color: white;
+    text-align: center;
+    padding: 30px;
+    margin-top: 50px;
 }
 
 /* =========================================
@@ -129,7 +169,7 @@ footer {
 /* Para Tablets */
 @media (max-width: 992px) {
     .contenedor {
-        flex-direction: column; 
+        flex-direction: column;
     }
 }
 
@@ -140,7 +180,7 @@ footer {
         text-align: center;
         gap: 5px;
     }
-    
+
     .header-contenedor {
         flex-direction: column;
         gap: 15px;
@@ -175,14 +215,18 @@ footer {
 .submenu {
     display: none;
     position: absolute;
-    top: 100%; /* Se despliega justo debajo del botón Servicios */
+    top: 100%;
+    /* Se despliega justo debajo del botón Servicios */
     left: 0;
-    background-color: #002b5e; /* Mismo color azul oscuro del header */
+    background-color: #002b5e;
+    /* Mismo color azul oscuro del header */
     min-width: 220px;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
     border-radius: 0 0 4px 4px;
-    border-top: 3px solid #00a8cc; /* Línea celeste para hacer juego con el header */
-    z-index: 100; /* Asegura que flote por encima del contenido/Hero */
+    border-top: 3px solid #00a8cc;
+    /* Línea celeste para hacer juego con el header */
+    z-index: 100;
+    /* Asegura que flote por encima del contenido/Hero */
     list-style: none;
     padding: 10px 0;
 }
@@ -190,7 +234,8 @@ footer {
 /* Cambiamos la disposición del submenú a bloque vertical */
 .submenu li {
     width: 100%;
-    line-height: 1.2; /* Ajuste de línea para que no sea tan alto como el global */
+    line-height: 1.2;
+    /* Ajuste de línea para que no sea tan alto como el global */
 }
 
 /* Estilos para los enlaces dentro del submenú */
@@ -213,7 +258,8 @@ footer {
 .submenu a:hover {
     background-color: #004080;
     border-radius: 0;
-    color: #00a8cc; /* El texto cambia a celeste al pasar el mouse */
+    color: #00a8cc;
+    /* El texto cambia a celeste al pasar el mouse */
 }
 
 /* --- TRUCO CLAVE: Mostrar el submenú al pasar el cursor por el elemento padre --- */
@@ -226,18 +272,20 @@ footer {
 /* Añade esto dentro de tu bloque @media (max-width: 768px) existente para que no se rompa en celulares */
 @media (max-width: 768px) {
     .submenu {
-        position: static; /* En celulares es mejor que empuje el contenido hacia abajo en vez de flotar */
+        position: static;
+        /* En celulares es mejor que empuje el contenido hacia abajo en vez de flotar */
         width: 100%;
-        background-color: #001f42; /* Un tono un poco más oscuro para diferenciarlo */
+        background-color: #001f42;
+        /* Un tono un poco más oscuro para diferenciarlo */
         box-shadow: none;
         border-top: none;
         padding: 0;
     }
-    
+
     .menu-desplegable:hover .submenu {
         display: block;
     }
-    
+
     .submenu a {
         text-align: center;
         padding: 10px;
@@ -246,11 +294,11 @@ footer {
 }
 
 /* --- CONFIGURACIÓN DE COLUMNAS DEL FOOTER --- */
-footer { 
-    background-color: #1a1a1a; 
-    color: white; 
-    padding: 40px 0 20px 0; 
-    margin-top: 50px; 
+footer {
+    background-color: #1a1a1a;
+    color: white;
+    padding: 40px 0 20px 0;
+    margin-top: 50px;
 }
 
 .footer-contenedor {
@@ -284,26 +332,26 @@ footer {
 
 /* QUITAR PUNTOS DE LAS LISTAS DEL FOOTER */
 .footer-columna ul {
-    list-style: none; 
+    list-style: none;
     padding: 0;
     margin: 0;
 }
 
 .footer-columna ul li {
     margin-bottom: 8px;
-    line-height: 1.4; 
+    line-height: 1.4;
 }
 
 /* ARREGLAR ENLACES AZULES */
 .footer-columna a {
-    color: #ccc;             
-    text-decoration: none;   
+    color: #ccc;
+    text-decoration: none;
     transition: color 0.2s ease;
-    font-weight: normal;     
+    font-weight: normal;
 }
 
 .footer-columna a:hover {
-    color: #00a8cc;        
+    color: #00a8cc;
     text-decoration: underline;
 }
 
