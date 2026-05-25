@@ -4,7 +4,10 @@
     padding: 0;
     box-sizing: border-box;
 }
-
+html, body {
+    width: 100%;
+    overflow-x: hidden; /* Corta drásticamente cualquier elemento que intente salirse por los costados */
+}
 body {
     font-family: Arial, sans-serif;
     background-color: #f0f4f8;
