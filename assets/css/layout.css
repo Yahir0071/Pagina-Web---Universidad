@@ -77,8 +77,11 @@ header {
 
 /* Control del tamaño del nuevo logo (Limpio, sin display flex aquí) */
 .logo-img {
-    height: 100%;
+    /* CLAVE: Le damos un ancho máximo fijo desde el inicio para que NUNCA 
+       pueda superar su tamaño real, sin importar lo que haga el contenedor */
+    max-width: 180px; 
     width: 100%;
+    height: auto;
     display: block;
     object-fit: contain;
 }
@@ -86,17 +89,18 @@ header {
 .logo-contenedor {
     display: flex;
     align-items: center;
-    justify-content: center;
-    height: 50px;
-    width: 180px;
+    width: auto; /* Dejamos que el contenedor se adapte al contenido */
 }
 
 /* --- NAVEGACIÓN (¡MANTENER!) --- */
 nav ul {
-    list-style-type: none;
-    display: flex;
-    align-items: center;
-    gap: 20px;
+    list-style-type: none; 
+    display: flex; 
+    align-items: center; 
+    gap: 15px; /* Reducimos ligeramente a 15px para dar más espacio a los textos */
+    flex-wrap: wrap; /* Permite que el menú sea flexible */
+    padding: 0;
+    margin: 0;
 }
 
 nav a {
@@ -180,26 +184,55 @@ footer {
         gap: 5px;
     }
 
-    .header-contenedor {
-        flex-direction: column;
-        gap: 15px;
-    }
-
-    /* Preparación del menú responsivo */
     nav {
-        width: 100%;
+        width: 100%; /* El contenedor de navegación ocupa todo el ancho */
     }
 
     nav ul {
-        flex-direction: column;
+        flex-direction: column; /* ¡Magia de Flexbox! Los enlaces se apilan uno debajo del otro */
         width: 100%;
+        gap: 0; /* Quitamos el espacio lateral */
+    }
+
+    nav ul li {
+        width: 100%; /* Cada ítem toma toda la fila */
     }
 
     nav a {
-        display: block;
+        display: block; /* Hace que todo el ancho sea clickeable */
         text-align: center;
-        padding: 10px;
-        border-bottom: 1px solid #004080;
+        padding: 12px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* Separador sutil */
+    }
+
+    /* Ajuste para el botón CTA "Solicita asesoría" dentro del menú móvil */
+    nav ul li .btn-cta {
+        display: block;
+        margin: 15px auto 5px auto; /* Lo centra y le da aire arriba y abajo */
+        width: 80%; /* No se estira al 100% para que mantenga forma de botón */
+        border-radius: 25px;
+    }
+    
+    /* Si tienes el submenú desplegable de servicios, evita que flote en celulares */
+    .submenu {
+        position: static !important; 
+        width: 100%;
+        box-shadow: none;
+    }
+
+    .logo-contenedor {
+        margin: 0 auto; /* Centra el bloque del logo */
+    }
+
+    .logo-img {
+        max-width: 150px;
+    }
+    
+    /* Espacio extra para separar el logo centrado del menú que viene abajo */
+    .header-contenedor {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
     }
 }
 
