@@ -67,6 +67,67 @@
     margin-bottom: 25px; 
     color: #555; 
 }
+/* --- SECCIÓN EXPERIENCIA (ULTRA RESUMIDA) --- */
 
+.seccion-experiencia {
+    width: 100%;
+    margin-top: 40px;
+}
+
+/* Barra amarilla de extremo a extremo */
+.barra-amarilla-mensaje {
+    background-color: #ffcc00; /* Reutiliza tu amarillo corporativo */
+    padding: 15px;
+    text-align: center;
+}
+
+/* Contenedor centralizado para el contenido */
+.contenido-experiencia {
+    max-width: 1400px;
+    margin: 40px auto;
+    padding: 0 30px;
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.texto-experiencia {
+    flex: 1;
+}
+
+.texto-experiencia h3 {
+    font-size: 1.6em;
+    line-height: 1.3;
+    margin-bottom: 15px;
+}
+
+/* Botón negro estilizado */
+.btn-solicitar-negro {
+    display: inline-block;
+    background: #000;
+    color: #fff;
+    padding: 12px 30px;
+    border-radius: 25px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.btn-solicitar-negro:hover {
+    background: #222;
+}
+
+.img-experiencia-logo {
+    width: 100%;
+    max-width: 550px;
+    border-radius: 12px;
+}
+
+/* Adaptabilidad para pantallas medianas y móviles */
+@media (max-width: 992px) {
+    .contenido-experiencia {
+        flex-direction: column;
+        text-align: center;
+    }
+}
 
 
