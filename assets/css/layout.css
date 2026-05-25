@@ -6,7 +6,6 @@ body {
     /* Creamos 4 filas: las barras se adaptan solas (auto) y el main toma todo el espacio sobrante (1fr) */
     grid-template-rows: auto auto 1fr auto;
 
-    /* Le ponemos nombre a cada espacio para ordenarlo fácilmente */
     grid-template-areas:
         "topbar"
         "header"
@@ -16,16 +15,9 @@ body {
     min-height: 100vh;
     margin: 0;
     padding: 0;
+    background-color: #f0f4f8;
 }
 
-/* Asignamos cada etiqueta HTML a su fila correspondiente del Grid */
-.top-bar {
-    grid-area: topbar;
-}
-
-header {
-    grid-area: header;
-}
 
 main {
     grid-area: main;
@@ -37,24 +29,31 @@ footer {
 }
 
 
-
 /* --- BARRA SUPERIOR E INFO --- */
 .top-bar {
-    background-color: #ffcc00;
-    color: #000;
-    font-weight: bold;
-    padding: 8px 20px;
-    display: flex;
-    justify-content: space-between;
+    grid-area: topbar;
+    width: 100%;
+    background-color: #ffcc00; /* El fondo amarillo ahora sí va de extremo a extremo */
+}
+
+.top-bar-contenedor {
+    display: flex;                  
+    justify-content: space-between; 
+    align-items: center;            
     max-width: 1400px;
     margin: 0 auto;
+    padding: 8px 20px;
+    color: #000;
+    font-weight: bold;
     font-size: 0.9em;
 }
 
 /* --- CABECERA Y NAVEGACIÓN --- */
 header {
+    grid-area: header;
     background-color: #002b5e;
     color: white;
+    width: 100%;
     border-bottom: 5px solid #00a8cc;
 }
 
