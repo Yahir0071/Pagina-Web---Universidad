@@ -216,9 +216,9 @@ aside ul {
 
     /* Si tienes el submenú desplegable de servicios, evita que flote en celulares */
     .submenu {
-        position: static !important; 
+        position: static !important;
         width: 100%;
-        background-color: #001f42; 
+        background-color: #001f42;
         box-shadow: none;
         border-top: none;
         padding: 0;
@@ -233,8 +233,8 @@ aside ul {
     .menu-desplegable:hover .submenu {
         display: block;
 
+    }
 }
-
 
 
 /* --- CONFIGURACIÓN DEL SUBMENÚ DESPLEGABLE --- */
