@@ -12,7 +12,7 @@
 </head>
 
 <body>
-     <div class="top-bar">
+    <div class="top-bar">
         <div class="top-bar-contenedor">
             <span>📞 Central: (01) 241-0510</span>
             <span>🕒 Horario de Atención: Lun-Vie de 8:00 am a 7:00 pm</span>
@@ -26,7 +26,10 @@
                     <img src="../../assets/img/logo1.png" alt="SmartWare Logo" class="logo-img" />
                 </div>
             </a>
-            <nav>
+            <input type="checkbox" id="menu-check" class="menu-check">
+            <label for="menu-check" class="menu-icono">&#9776;</label>
+
+            <nav class="menu-navegacion">
                 <ul>
                     <li><a href="../../vistas/promos/index.html">Promociones</a></li>
                     <li class="menu-desplegable">
@@ -51,107 +54,128 @@
     <main>
         <div class="contenedor">
             <section>
-
                 <div class="tabla-responsiva">
                     <table>
                         <caption>Tarifario Sector Agroindustrial 2026</caption>
-                        <tr>
-                            <th>Tipo de Almacén</th>
-                            <th>Área (m²)</th>
-                            <th>Costo Mensual</th>
-                            <th>Beneficio Tecnológico</th>
-                        </tr>
-                        <tr>
-                            <td rowspan="2">Cámara de Pre-frío</td>
-                            <td>40 m²</td>
-                            <td>S/ 2,800.00</td>
-                            <td rowspan="2">Monitoreo térmico en tiempo real con alertas al celular.</td>
-                        </tr>
-                        <tr>
-                            <td>80 m²</td>
-                            <td>S/ 5,200.00</td>
-                        </tr>
-                        <tr>
-                            <td>Packing Logístico</td>
-                            <td>150 m²</td>
-                            <td>S/ 8,500.00</td>
-                            <td>Gestión de lotes bajo normativa de exportación.</td>
-                        </tr>
-                        <tr>
-                            <td colspan="4" class="tabla-nota">
-                                <strong>*Precios incluyen certificación de fumigación trimestral.</strong>
-                            </td>
-                        </tr>
+                        <thead>
+                            <tr>
+                                <th>Tipo de Almacén</th>
+                                <th>Área (m²)</th>
+                                <th>Costo Mensual</th>
+                                <th>Beneficio Tecnológico</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td data-label="Tipo de Almacén">Cámara de Pre-frío</td>
+                                <td data-label="Área (m²)">40 m²</td>
+                                <td data-label="Costo Mensual">S/ 2,800.00</td>
+                                <td data-label="Beneficio Tecnológico">Monitoreo térmico en tiempo real con alertas al
+                                    celular.</td>
+                            </tr>
+                            <tr>
+                                <td data-label="Tipo de Almacén">Cámara de Pre-frío</td>
+                                <td data-label="Área (m²)">80 m²</td>
+                                <td data-label="Costo Mensual">S/ 5,200.00</td>
+                                <td data-label="Beneficio Tecnológico">Monitoreo térmico en tiempo real con alertas al
+                                    celular.</td>
+                            </tr>
+                            <tr>
+                                <td data-label="Tipo de Almacén">Packing Logístico</td>
+                                <td data-label="Área (m²)">150 m²</td>
+                                <td data-label="Costo Mensual">S/ 8,500.00</td>
+                                <td data-label="Beneficio Tecnológico">Gestión de lotes bajo normativa de exportación.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="4" class="tabla-nota">
+                                    <strong>*Precios incluyen certificación de fumigación trimestral.</strong>
+                                </td>
+                            </tr>
+                        </tbody>
                     </table>
                 </div>
-
                 <div class="tabla-responsiva">
                     <table>
                         <caption>Tarifario Hub Gastronómico (Lima Metropolitana)</caption>
-                        <tr>
-                            <th>Tipo de Insumo</th>
-                            <th>Área (m²)</th>
-                            <th>Precio Mensual</th>
-                            <th>Gestión SmartWare</th>
-                        </tr>
-                        <tr>
-                            <td rowspan="2">Secos y Abarrotes</td>
-                            <td>25 m²</td>
-                            <td>S/ 850.00</td>
-                            <td rowspan="2">Control automático de fechas de vencimiento (FEFO).</td>
-                        </tr>
-                        <tr>
-                            <td>60 m²</td>
-                            <td>S/ 1,900.00</td>
-                        </tr>
-                        <tr>
-                            <td>Menajería y Equipo</td>
-                            <td>40 m²</td>
-                            <td>S/ 1,400.00</td>
-                            <td>Reporte de stock crítico para reaprovechamiento.</td>
-                        </tr>
-                        <tr>
-                            <td colspan="4" class="tabla-nota">
-                                <strong>*Precios incluyen certificación de fumigación trimestral.</strong>
-                            </td>
-                        </tr>
+                        <thead>
+                            <tr>
+                                <th>Tipo de Insumo</th>
+                                <th>Área (m²)</th>
+                                <th>Precio Mensual</th>
+                                <th>Gestión SmartWare</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td data-label="Tipo de Insumo">Secos y Abarrotes</td>
+                                <td data-label="Área (m²)">25 m²</td>
+                                <td data-label="Precio Mensual">S/ 850.00</td>
+                                <td data-label="Gestión SmartWare">Control automático de fechas de vencimiento (FEFO).
+                                </td>
+                            </tr>
+                            <tr>
+                                <td data-label="Tipo de Insumo">Secos y Abarrotes</td>
+                                <td data-label="Área (m²)">60 m²</td>
+                                <td data-label="Precio Mensual">S/ 1,900.00</td>
+                                <td data-label="Gestión SmartWare">Control automático de fechas de vencimiento (FEFO).
+                                </td>
+                            </tr>
+                            <tr>
+                                <td data-label="Tipo de Insumo">Menajería y Equipo</td>
+                                <td data-label="Área (m²)">40 m²</td>
+                                <td data-label="Precio Mensual">S/ 1,400.00</td>
+                                <td data-label="Gestión SmartWare">Reporte de stock crítico para reaprovechamiento.</td>
+                            </tr>
+                            <tr>
+                                <td colspan="4" class="tabla-nota">
+                                    <strong>*Precios incluyen certificación de fumigación trimestral.</strong>
+                                </td>
+                            </tr>
+                        </tbody>
                     </table>
                 </div>
-
                 <div class="tabla-responsiva">
                     <table>
                         <caption>Tarifario Sector Textil & Moda</caption>
-                        <tr>
-                            <th>Espacio de Producción</th>
-                            <th>Área (m²)</th>
-                            <th>Precio Mensual</th>
-                            <th>Funcionalidad del Sistema</th>
-                        </tr>
-                        <tr>
-                            <td rowspan="2">Almacén de Telas</td>
-                            <td>30 m²</td>
-                            <td>S/ 900.00</td>
-                            <td>Clasificación por tipo de fibra y color en base de datos.</td>
-                        </tr>
-                        <tr>
-                            <td>70 m²</td>
-                            <td>S/ 1,950.00</td>
-                            <td>Integración con escáneres de código de barras.</td>
-                        </tr>
-                        <tr>
-                            <td>Showroom + Depósito</td>
-                            <td>15 m²</td>
-                            <td>S/ 1,200.00</td>
-                            <td>Sincronización de ventas online y stock físico.</td>
-                        </tr>
-                        <tr>
-                            <td colspan="4" class="tabla-nota">
-                                <strong>*Precios incluyen certificación de fumigación trimestral.</strong>
-                            </td>
-                        </tr>
+                        <thead>
+                            <tr>
+                                <th>Espacio de Producción</th>
+                                <th>Área (m²)</th>
+                                <th>Precio Mensual</th>
+                                <th>Funcionalidad del Sistema</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td data-label="Espacio de Producción">Almacén de Telas</td>
+                                <td data-label="Área (m²)">30 m²</td>
+                                <td data-label="Precio Mensual">S/ 900.00</td>
+                                <td data-label="Funcionalidad del Sistema">Clasificación por tipo de fibra y color en
+                                    base de datos.</td>
+                            </tr>
+                            <tr>
+                                <td data-label="Espacio de Producción">Almacén de Telas</td>
+                                <td data-label="Área (m²)">70 m²</td>
+                                <td data-label="Precio Mensual">S/ 1,950.00</td>
+                                <td data-label="Funcionalidad del Sistema">Integración con escáneres de código de
+                                    barras.</td>
+                            </tr>
+                            <tr>
+                                <td data-label="Espacio de Producción">Showroom + Depósito</td>
+                                <td data-label="Área (m²)">15 m²</td>
+                                <td data-label="Precio Mensual">S/ 1,200.00</td>
+                                <td data-label="Funcionalidad del Sistema">Sincronización de ventas online y stock
+                                    físico.</td>
+                            </tr>
+                            <tr>
+                                <td colspan="4" class="tabla-nota">
+                                    <strong>*Precios incluyen certificación de fumigación trimestral.</strong>
+                                </td>
+                            </tr>
+                        </tbody>
                     </table>
                 </div>
-
             </section>
         </div>
     </main>
@@ -218,3 +242,5 @@
         </div>
     </footer>
 </body>
+
+</html>
