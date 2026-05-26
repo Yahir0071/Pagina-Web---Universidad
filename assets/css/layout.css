@@ -311,11 +311,11 @@ footer {
 }
 
 .menu-check {
-    display: none; /* Oculta la casilla de verificación siempre */
+    display: none;
 }
 
 .menu-icono {
-    display: none; /* Oculta el ícono de las 3 rayitas en PC */
+    display: none;
     font-size: 2em;
     color: white;
     cursor: pointer;
@@ -325,94 +325,88 @@ footer {
 /* =========================================
    MEDIA QUERIES (DISEÑO RESPONSIVO)
    ========================================= */
+@media (max-width: 480px) {
 
-/* --- TABLETS (max-width: 992px) --- */
-@media (max-width: 992px) {
-    .header-contenedor {
-        flex-direction: column;
-        gap: 15px;
-        text-align: center;
-    }
-    .logo-contenedor {
-        margin: 0 auto;
-    }
-    nav {
-        width: 100%;
-    }
-    nav ul {
-        flex-direction: column;
-        width: 100%;
-        gap: 0;
-    }
-    nav ul li {
-        width: 100%;
-    }
-    nav a {
-        display: block;
-        text-align: center;
-        padding: 12px;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-    }
-    
-    /* El submenú deja de flotar en el aire y se integra para tablets */
-    .submenu {
-        position: static !important;
-        width: 100%;
-        background-color: #001f42;
-        box-shadow: none;
-        border-top: none;
-        padding: 0;
-    }
-    .submenu a {
-        text-align: center;
-        padding: 10px;
-        background-color: rgba(0, 0, 0, 0.1);
+    /* Ajustes extra para pantallas muy pequeñas */
+    .top-bar-contenedor {
+        font-size: 0.75em;
     }
 
-    /* Las columnas del cuerpo pasan a apilarse verticalmente */
-    .contenedor {
-        flex-direction: column;
-        gap: 25px;
+    .logo-img {
+        max-width: 120px;
     }
-    section, aside {
+
+    /* Achicamos la caja del Hero y su texto para que no desborde */
+    .hero {
+        height: 600px;
+    }
+
+    .hero-caja {
+        padding: 20px;
+        width: 95%;
+    }
+
+    .hero-caja h2 {
+        font-size: 1.5em;
+    }
+
+    .hero-caja p {
+        font-size: 1em;
+    }
+
+    .btn-solicitar-negro {
         width: 100%;
+        /* Botón ocupe todo el ancho */
+        text-align: center;
     }
 }
 
-/* --- MÓVILES (max-width: 768px) --- */
-@media (max-width: 768px) {
+@media (min-width: 481px) and (max-width: 768px) {
     .top-bar-contenedor {
         flex-direction: column;
         text-align: center;
         gap: 5px;
     }
 
+    /* Ajuste del Header para que el logo y la hamburguesa queden arriba */
     .header-contenedor {
-        flex-direction: column;
-        gap: 15px;
-        text-align: center;
+        flex-direction: row;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        padding: 15px;
     }
 
     .logo-contenedor {
-        margin: 0 auto;
+        margin: 0;
     }
 
     .logo-img {
-        max-width: 140px;
+        max-width: 150px;
     }
 
-    nav {
+    /* Activamos el ícono del menú (Hamburguesa) */
+    .menu-icono {
+        display: block;
+        order: 2;
+    }
+
+    /* Ocultamos el menú por defecto y lo mandamos abajo */
+    nav.menu-navegacion {
+        display: none;
         width: 100%;
+        order: 3;
+        margin-top: 15px;
+    }
+
+    /* LÓGICA DEL MENÚ: Solo se muestra si el checkbox está marcado */
+    .menu-check:checked~nav.menu-navegacion {
+        display: block;
     }
 
     nav ul {
         flex-direction: column;
         width: 100%;
         gap: 0;
-    }
-
-    nav ul li {
-        width: 100%;
     }
 
     nav a {
@@ -422,7 +416,6 @@ footer {
         border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     }
 
-    /* Ajuste para el botón CTA "Solicita asesoría" dentro del menú móvil */
     nav ul li .btn-cta {
         display: block;
         margin: 15px auto 5px auto;
@@ -430,7 +423,7 @@ footer {
         border-radius: 25px;
     }
 
-    /* Si tienes el submenú desplegable de servicios, evita que flote en celulares */
+    /* Reseteo del submenú para versión móvil */
     .submenu {
         position: static !important;
         width: 100%;
@@ -446,18 +439,280 @@ footer {
         background-color: rgba(0, 0, 0, 0.1);
     }
 
+    /* Contenido central a una sola columna */
+    .contenedor {
+        flex-direction: column;
+        gap: 25px;
+    }
+
+    section,
+    aside {
+        width: 100%;
+    }
+
+    .hero-caja {
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        width: 85%;
+    }
+
     .footer-contenedor {
-        flex-direction: column; /* Convierte las columnas horizontales en filas verticales */
+        flex-direction: column;
         gap: 30px;
         padding: 30px 20px;
     }
 
     .footer-columna {
         width: 100%;
-        text-align: center; /* Centra los textos informativos en pantallas chicas */
+        text-align: center;
     }
 
     .redes-sociales {
-        justify-content: center; /* Centra los iconos de redes sociales */
+        justify-content: center;
+    }
+}
+
+@media(min-width: 769px) and (max-width: 1279px) {
+
+    /* 1. HEADER Y NAVEGACIÓN */
+    .header-contenedor {
+        flex-direction: column;
+        gap: 15px;
+        padding: 15px;
+    }
+
+    .logo-contenedor {
+        margin: 0 auto;
+    }
+
+    nav {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    nav ul {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    nav a {
+        padding: 8px 12px;
+        font-size: 0.9em;
+    }
+
+    /* 2. HERO BOX (Optimiza tu logística) */
+    .hero-caja {
+        left: 50% !important;
+        transform: translate(-50%, -50%) !important;
+        text-align: center;
+        width: 85%;
+        box-sizing: border-box;
+    }
+
+    /* 3. MAIN Y ASIDE (Contenido central) */
+    .contenedor {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    section,
+    aside {
+        width: 100% !important;
+        flex: none;
+        max-width: 100%;
+        box-sizing: border-box;
+        margin: 0;
+    }
+
+    /* 4. SECCIÓN EXPERIENCIA */
+    .contenido-experiencia {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .img-experiencia-logo {
+        max-width: 100%;
+        height: auto;
+    }
+
+    /* 5. FOOTER */
+    .footer-contenedor {
+        flex-wrap: wrap;
+        gap: 30px;
+    }
+
+    .footer-columna {
+        flex: 1 1 40%;
+        text-align: center;
+    }
+
+    .footer-columna.columna-ancha {
+        flex: 1 1 100%;
+    }
+
+    .redes-sociales {
+        justify-content: center;
+    }
+}
+
+@media (min-width: 1280px) {}
+
+
+/* Estilos responsive para tablas - sin cambiar colores ni estilos existentes */
+
+.tabla-responsiva {
+    width: 100%;
+    overflow-x: auto;
+    margin-bottom: 2rem;
+    -webkit-overflow-scrolling: touch;
+}
+
+.tabla-responsiva table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+/* ==========================================
+           MÓVILES: 0-480px
+  =========================================== */
+@media (max-width: 480px) {
+    .tabla-responsiva {
+        overflow-x: auto;
+    }
+
+    .tabla-responsiva table {
+        font-size: 0.8rem;
+    }
+
+    .tabla-responsiva thead {
+        display: none;
+    }
+
+    .tabla-responsiva tbody {
+        display: block;
+        width: 100%;
+    }
+
+    .tabla-responsiva tr {
+        display: block;
+        margin-bottom: 1.2rem;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+    }
+
+    .tabla-responsiva td {
+        display: block;
+        text-align: right;
+        padding: 0.6rem 0.8rem;
+        position: relative;
+        padding-left: 40%;
+        border-bottom: 1px solid #f0f0f0;
+    }
+
+    .tabla-responsiva td:last-child {
+        border-bottom: none;
+    }
+
+    .tabla-responsiva td:before {
+        content: attr(data-label);
+        position: absolute;
+        left: 0.8rem;
+        font-weight: bold;
+        text-align: left;
+        width: 35%;
+        font-size: 0.75rem;
+    }
+
+    .tabla-nota {
+        display: block !important;
+        text-align: center !important;
+        padding: 0.8rem !important;
+    }
+
+    .tabla-nota:before {
+        display: none;
+    }
+}
+
+/* ============================================
+           TABLETS PEQUEÑAS Y MEDIANAS: 481-768px
+   ============================================ */
+@media (min-width: 481px) and (max-width: 768px) {
+    .tabla-responsiva {
+        overflow-x: auto;
+    }
+
+    .tabla-responsiva table {
+        font-size: 0.9rem;
+    }
+
+    .tabla-responsiva thead {
+        display: none;
+    }
+
+    .tabla-responsiva tbody {
+        display: block;
+        width: 100%;
+    }
+
+    .tabla-responsiva tr {
+        display: block;
+        margin-bottom: 1.5rem;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        padding: 0.5rem 0;
+    }
+
+    .tabla-responsiva td {
+        display: block;
+        text-align: right;
+        padding: 0.8rem 1rem;
+        position: relative;
+        padding-left: 45%;
+        border-bottom: 1px solid #f0f0f0;
+    }
+
+    .tabla-responsiva td:last-child {
+        border-bottom: none;
+    }
+
+    .tabla-responsiva td:before {
+        content: attr(data-label);
+        position: absolute;
+        left: 1rem;
+        font-weight: bold;
+        text-align: left;
+        width: 40%;
+    }
+
+    .tabla-nota {
+        display: block !important;
+        text-align: center !important;
+        padding: 1rem !important;
+    }
+
+    .tabla-nota:before {
+        display: none;
+    }
+}
+
+/* ============================================
+           LAPTOPS: 769-1279px (Desktop normal)
+    ============================================ */
+@media (min-width: 769px) and (max-width: 1279px) {
+    .tabla-responsiva table {
+        font-size: 0.95rem;
+    }
+}
+
+/* ============================================
+           LARGE DESKTOPS: 1280px+
+   ============================================ */
+@media (min-width: 1280px) {
+    .tabla-responsiva table {
+        font-size: 1rem;
     }
 }
