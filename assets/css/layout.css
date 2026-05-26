@@ -361,7 +361,7 @@ footer {
     }
 }
 
-@media (min-width: 481px) and (max-width: 768px) {
+@media (max-width: 768px) {
     .top-bar-contenedor {
         flex-direction: column;
         text-align: center;
