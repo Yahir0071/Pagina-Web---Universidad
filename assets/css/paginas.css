@@ -7,28 +7,20 @@
     background-position: center;
     position: relative;
     border-bottom: 5px solid #002b5e;
-    /* Vinculamos la animación: dura 15 segundos en total (5s por cada una de las 3 imágenes) */
     animation: cambiarFondoHero 15s infinite ease-in-out;
 }
 
 /* @keyframes para alternar las 3 imágenes de fondo en tu clase .hero */
 @keyframes cambiarFondoHero {
-    /* --- IMAGEN 1 (fondo.png) --- */
     0%, 30% {
         background-image: url('../img/fondo1.png');
     }
-    
-    /* --- IMAGEN 2 (Ejm: DatosDash.png o la que elijas) --- */
     33%, 63% {
         background-image: url('../img/fondo2.png');
     }
-    
-    /* --- IMAGEN 3 (Ejm: LimaCentro.png o la que elijas) --- */
     66%, 96% {
         background-image: url('../img/fondo3.png');
     }
-    
-    /* Volvemos al inicio automáticamente para cerrar el ciclo infinito */
     100% {
         background-image: url('../img/fondo1.png');
     }
@@ -67,8 +59,8 @@
     margin-bottom: 25px; 
     color: #555; 
 }
-/* --- SECCIÓN EXPERIENCIA (ULTRA RESUMIDA) --- */
 
+/* --- SECCIÓN EXPERIENCIA  --- */
 .seccion-experiencia {
     width: 100%;
     margin-top: 40px;
@@ -76,7 +68,7 @@
 
 /* Barra amarilla de extremo a extremo */
 .barra-amarilla-mensaje {
-    background-color: #ffcc00; /* Reutiliza tu amarillo corporativo */
+    background-color: #ffcc00; 
     padding: 15px;
     text-align: center;
 }
