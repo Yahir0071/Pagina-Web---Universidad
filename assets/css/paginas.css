@@ -45,15 +45,17 @@
 
 @media (max-width: 768px) {
     .hero {
-        min-height: 500px; 
+        display: flex;
+        justify-content: center; 
+        align-items: center;   
+        padding: 20px;
     }
     .hero-caja {
-        position: relative; 
-        top: 0;
-        left: 50%;
-        transform: translateX(-50%); 
+         position: static; 
+        transform: none;
         text-align: center;
-        margin: 0 auto;
+        margin: 0; 
+        width: 100%;
     }
 }
 
