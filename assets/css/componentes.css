@@ -536,3 +536,64 @@ input[type="submit"]:hover {
     display: inline-block;
 }
 
+/* --- COMPONENTE: TARJETA BLANCA DE BENEFICIOS --- */
+.tarjeta-blanca {
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    overflow: hidden;
+    width: 340px;
+    text-align: left;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.tarjeta-blanca:hover {
+    transform: translateY(-5px); /* Efecto sutil al pasar el mouse */
+}
+
+.tarjeta-img-superior {
+    width: 100%;
+    height: 200px;
+    object-fit: cover; /* Evita que la imagen se deforme */
+}
+
+.tarjeta-blanca-contenido {
+    padding: 25px 20px;
+}
+
+.tarjeta-blanca-cabecera {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.tarjeta-blanca-cabecera h3 {
+    color: #111111;
+    margin: 0;
+    font-size: 1.25rem;
+}
+
+.circulo-icono-amarillo {
+    background-color: #ffcc00; /* Color acento amarillo */
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.circulo-icono-amarillo img {
+    width: 22px;
+    height: 22px;
+    object-fit: contain;
+}
+
+.tarjeta-blanca-contenido p {
+    color: #555555;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin: 0;
+}
