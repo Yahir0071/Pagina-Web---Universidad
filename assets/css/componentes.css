@@ -668,6 +668,19 @@ input[type="submit"]:hover {
     background-color: #5a6268;
 }
 
+.contenedor-medidas-doble {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin: 30px 0;
+    flex-wrap: wrap;
+}
+
+.contenedor-medidas-doble .tarjeta-articulo {
+    width: 100%;
+    max-width: 350px;
+    text-align: left;
+}
 /* ==========================================
    AVISO DE COOKIES: TARJETA FLOTANTE IZQUIERDA
    ========================================== */
