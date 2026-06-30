@@ -61,7 +61,7 @@
                     datos
                     que necesitas.</p>
                 <br>
-                <form action="procesar.php" method="POST" enctype="multipart/form-data"
+                <form id="formulario-contacto" method="POST" enctype="multipart/form-data"
                     oninput="resultado.value=espacio.value">
 
                     <fieldset>
@@ -128,6 +128,16 @@
         </div>
     </main>
 
+    <!-- MODAL DE ÉXITO -->
+    <div id="modal-exito" class="modal">
+        <div class="modal-contenido">
+            <div class="modal-emoji">👍</div>
+            <div class="modal-titulo">¡Solicitud Enviada!</div>
+            <div class="modal-mensaje">Tu solicitud ha sido recibida correctamente. Nos pondremos en contacto en las próximas 24 horas hábiles.</div>
+            <div class="modal-cierre">Haz clic fuera para cerrar</div>
+        </div>
+    </div>
+
     <footer>
         <div class="footer-contenedor">
 
@@ -192,6 +202,9 @@
             <p>&copy; 2026 SmartWare. Todos los derechos reservados.</p>
         </div>
     </footer>
+
+    <!-- Script del Modal -->
+    <script src="../../js/modal.js"></script>
 </body>
 
 </html>
