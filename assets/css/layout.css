@@ -41,7 +41,7 @@ main {
     padding: 8px 20px;
     color: #000;
     font-weight: bold;
-    font-size: 0.9em;
+    font-size: 0.9rem;
 }
 
 /* --- CABECERA Y NAVEGACIÓN --- */
@@ -185,7 +185,7 @@ aside ul {
 .submenu a {
     display: block;
     padding: 12px 20px;
-    font-size: 0.95em;
+    font-size: 0.95rem;
     font-weight: normal;
     text-align: left;
     border-bottom: 1px solid rgba(255, 255, 255, 0.05);
@@ -245,7 +245,7 @@ footer {
 
 .footer-columna h3 {
     color: #fff;
-    font-size: 1.1em;
+    font-size: 1.1rem;
     font-weight: bold;
     margin-bottom: 15px;
 }
@@ -277,7 +277,7 @@ footer {
 
 /* ESTILOS DE TEXTO PARA HORARIOS */
 .horario-titulo {
-    font-size: 0.9em;
+    font-size: 0.9rem;
     font-weight: bold;
     color: #fff;
     margin-top: 12px;
@@ -285,7 +285,7 @@ footer {
 }
 
 .horario-enlace {
-    font-size: 0.85em;
+    font-size: 0.85rem;
     color: #aaa;
 }
 
@@ -298,7 +298,7 @@ footer {
 .redes-sociales {
     display: flex;
     gap: 12px;
-    font-size: 1.2em;
+    font-size: 1.2rem;
 }
 
 .footer-inferior {
@@ -307,7 +307,7 @@ footer {
     padding-top: 15px;
     text-align: center;
     color: #666;
-    font-size: 0.85em;
+    font-size: 0.85rem;
 }
 
 .menu-check {
@@ -316,7 +316,7 @@ footer {
 
 .menu-icono {
     display: none;
-    font-size: 2em;
+    font-size: 2rem;
     color: white;
     cursor: pointer;
 }
@@ -329,7 +329,7 @@ footer {
 
     /* Ajustes extra para pantallas muy pequeñas */
     .top-bar-contenedor {
-        font-size: 0.75em;
+        font-size: 0.75rem;
     }
 
     .logo-img {
@@ -347,11 +347,11 @@ footer {
     }
 
     .hero-caja h2 {
-        font-size: 1.5em;
+        font-size: 1.5rem;
     }
 
     .hero-caja p {
-        font-size: 1em;
+        font-size: 1rem;
     }
 
     .btn-solicitar-negro {
@@ -500,7 +500,7 @@ footer {
 
     nav a {
         padding: 8px 12px;
-        font-size: 0.9em;
+        font-size: 0.9rem;
     }
 
     /* 2. HERO BOX (Optimiza tu logística) */
