@@ -536,3 +536,18 @@ input[type="submit"]:hover {
     display: inline-block;
 }
 
+/* --- BOTONES REUTILIZABLES --- */
+.btn-solicitar-negro {
+    display: inline-block;
+    background: #000;
+    color: #fff;
+    padding: 12px 30px;
+    border-radius: 25px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: background 0.3s ease; 
+}
+
+.btn-solicitar-negro:hover {
+    background: #222;
+}
