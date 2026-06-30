@@ -716,3 +716,49 @@ footer {
         font-size: 1rem;
     }
 }
+
+/* --- SECCIÓN BENEFICIOS (INTEGRACIÓN) --- */
+.seccion-beneficios-oscuro {
+    background-color: #0d0d0d; /* Fondo oscuro que contrasta con las tarjetas */
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.titulo-seccion-blanco {
+    color: #ffffff;
+    font-size: 1.6rem;
+    max-width: 800px;
+    margin: 0 auto 40px auto;
+    line-height: 1.4;
+}
+
+.contenedor-grid-beneficios {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-wrap: wrap; /* Mantiene el diseño responsivo en celulares */
+}
+
+/* --- SECCIÓN SEDES --- */
+.seccion-sedes {
+    background-color: #ffffff; /* Fondo blanco para contrastar con la sección oscura anterior */
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.encabezado-sedes {
+    margin-bottom: 40px;
+}
+
+.encabezado-sedes h2 {
+    color: #111111;
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+}
+
+.encabezado-sedes p {
+    color: #555555;
+    font-size: 1rem;
+}
