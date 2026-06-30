@@ -131,6 +131,7 @@ section {
 }
 
 /* ---BARRA LATERAL --- */
+/* ---BARRA LATERAL --- */
 aside {
     flex: 1;
     background-color: #e6f2ff;
@@ -147,10 +148,28 @@ aside hr {
 }
 
 aside ul {
-    margin-left: 20px;
-    margin-top: 10px;
+    list-style: none;
+    margin: 10px 0 0 0; 
 }
 
+aside ul li {
+    margin-bottom: 12px; 
+}
+
+aside ul li:last-child {
+    margin-bottom: 0; 
+}
+
+aside ul li a {
+    text-decoration: none; 
+    color: #004080;       
+    font-weight: 500;
+    transition: color 0.2s ease;
+}
+
+aside ul li a:hover {
+    color: #00a8cc;        
+}
 
 /* --- CONFIGURACIÓN DEL SUBMENÚ DESPLEGABLE --- */
 
