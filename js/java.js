@@ -1,27 +1,34 @@
-// Asegura que el script se ejecute una vez que todo el HTML esté cargado
+
+
 document.addEventListener("DOMContentLoaded", () => {
     
+    // 1. Selección de los elementos del DOM usando los nuevos IDs
     const banner = document.getElementById("banner-cookies");
-    const botonAceptar = document.getElementById("btn-aceptar");
-    const botonRechazar = document.getElementById("btn-rechazar");
+    const btnNecesarias = document.getElementById("btn-necesarias");
+    const btnPersonalizar = document.getElementById("btn-personalizar");
+    const btnAceptarTodas = document.getElementById("btn-aceptar-todas");
 
-    const estadoCookies = localStorage.getItem("cookiesAceptadas");
-
-    if (estadoCookies === "true" || estadoCookies === "false") {
-
+    const estadoCookies = sessionStorage.getItem("cookiesAceptadas");
+    if (estadoCookies === "true") {
         banner.style.display = "none"; 
     }
 
-   
-    botonAceptar.onclick = function() {
-        localStorage.setItem("cookiesAceptadas", "true"); 
-        banner.style.display = "none";                 
-        alert("¡Gracias! Has aceptado el uso de cookies en SmartWare."); 
+    function procesarAceptacion() {
+        sessionStorage.setItem("cookiesAceptadas", "true"); 
+        banner.style.display = "none";                    
+    }
+
+    btnNecesarias.onclick = function() {
+        procesarAceptacion();
     };
 
-    // Evento onclick para el botón Rechazar
-    botonRechazar.onclick = function() {
-        localStorage.setItem("cookiesAceptadas", "false"); 
-        banner.style.display = "none";                    
+    btnAceptarTodas.onclick = function() {
+        procesarAceptacion();
+        alert("¡Excelente! Has permitido todas las cookies para mejorar tu experiencia en SmartWare.");
+    };
+
+    btnPersonalizar.onclick = function() {
+        alert("Abriendo el panel dinámico de configuración de privacidad...");
+        procesarAceptacion();
     };
 });

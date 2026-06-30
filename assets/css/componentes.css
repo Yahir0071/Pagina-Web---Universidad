@@ -669,73 +669,90 @@ input[type="submit"]:hover {
 }
 
 /* ==========================================
-   ESTILOS PARA EL AVISO DE COOKIES (SmartWare)
+   AVISO DE COOKIES PREMIUM (3 BOTONES)
    ========================================== */
 
-/* Contenedor principal: lo fija abajo y al centro */
-.cookie-box {
+/* Contenedor principal a todo lo ancho de la pantalla */
+.cookie-premium-box {
     position: fixed;
-    bottom: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-    background-color: #001e3d; 
-    color: #ffffff;
-    padding: 18px 25px;
-    border-radius: 8px;
-    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.4);
-    z-index: 10000; 
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #ffffff; 
+    box-shadow: 0px -4px 20px rgba(0, 0, 0, 0.15); 
+    z-index: 10000;
+    padding: 20px 40px;
+    box-sizing: border-box; 
+    font-family: sans-serif;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    gap: 12px;
-    width: 90%;
-    max-width: 520px;
-    font-family: sans-serif;
-    text-align: center;
+    gap: 20px;
 }
 
-/* Texto informativo dentro del banner */
-.cookie-box p {
+/* Alineación de los textos a la izquierda */
+.cookie-premium-content {
+    text-align: left;
+}
+
+.cookie-premium-content h3 {
+    margin: 0 0 8px 0;
+    font-size: 16px;
+    font-weight: bold;
+    color: #111111;
+}
+
+.cookie-premium-content p {
     margin: 0;
-    font-size: 14px;
-    line-height: 1.4;
+    font-size: 13px;
+    color: #555555;
+    line-height: 1.5;
 }
 
-/* Contenedor de los botones */
-.cookie-buttons {
+/* Fila horizontal para distribuir los 3 botones */
+.cookie-premium-buttons {
     display: flex;
-    gap: 10px;
+    justify-content: space-between;
+    gap: 15px;
+    flex-wrap: wrap;
 }
 
-/* Estilos generales para ambos botones */
-.cookie-buttons button {
-    padding: 8px 20px;
-    border: none;
+/* Estilo para los botones con borde (Necesarias y Personalizar) */
+.btn-cookie-outline {
+    background-color: transparent;
+    border: 2px solid #00a8cc; 
+    color: #00a8cc;
+    padding: 10px 20px;
+    font-size: 13px;
+    font-weight: bold;
     border-radius: 4px;
     cursor: pointer;
-    font-weight: bold;
-    font-size: 14px;
-    transition: background-color 0.2s ease;
+    transition: all 0.2s ease;
+    flex: 1; 
+    min-width: 200px;
 }
 
-/* Botón Aceptar  */
-#btn-aceptar {
+.btn-cookie-outline:hover {
+    background-color: rgba(0, 168, 204, 0.1);
+}
+
+/* Estilo para el botón sólido principal (Permitir todas) */
+.btn-cookie-solid {
     background-color: #00a8cc; 
+    border: 2px solid #00a8cc;
     color: #ffffff;
+    padding: 10px 20px;
+    font-size: 13px;
+    font-weight: bold;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    flex: 1;
+    min-width: 200px;
 }
 
-#btn-aceptar:hover {
+.btn-cookie-solid:hover {
     background-color: #008fae;
-}
-
-/* Botón Rechazar (Gris neutro) */
-#btn-rechazar {
-    background-color: #6c757d;
-    color: #ffffff;
-}
-
-#btn-rechazar:hover {
-    background-color: #5a6268;
+    border-color: #008fae;
 }
 
 
