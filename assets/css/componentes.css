@@ -669,27 +669,29 @@ input[type="submit"]:hover {
 }
 
 /* ==========================================
-   AVISO DE COOKIES PREMIUM (3 BOTONES)
+   AVISO DE COOKIES: TARJETA FLOTANTE IZQUIERDA
    ========================================== */
 
-/* Contenedor principal a todo lo ancho de la pantalla */
+/* Contenedor principal: ahora es un cuadro flotante a la izquierda */
 .cookie-premium-box {
     position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
+    bottom: 25px; 
+    left: 25px;   
+    width: 380px; 
+    max-width: 90%; 
     background-color: #ffffff; 
-    box-shadow: 0px -4px 20px rgba(0, 0, 0, 0.15); 
+    box-shadow: 0px 8px 30px rgba(0, 0, 0, 0.2); 
+    border-radius: 8px; 
     z-index: 10000;
-    padding: 20px 40px;
-    box-sizing: border-box; 
+    padding: 22px;
+    box-sizing: border-box;
     font-family: sans-serif;
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 15px; 
 }
 
-/* Alineación de los textos a la izquierda */
+/* Alineación de los textos */
 .cookie-premium-content {
     text-align: left;
 }
@@ -705,49 +707,45 @@ input[type="submit"]:hover {
     margin: 0;
     font-size: 13px;
     color: #555555;
-    line-height: 1.5;
+    line-height: 1.45;
 }
 
-/* Fila horizontal para distribuir los 3 botones */
+/* Contenedor de botones: ahora se apilan en columna vertical para que entren en la tarjeta */
 .cookie-premium-buttons {
     display: flex;
-    justify-content: space-between;
-    gap: 15px;
-    flex-wrap: wrap;
+    flex-direction: column; 
+    gap: 8px;
+    width: 100%;
 }
 
-/* Estilo para los botones con borde (Necesarias y Personalizar) */
-.btn-cookie-outline {
-    background-color: transparent;
-    border: 2px solid #00a8cc; 
-    color: #00a8cc;
-    padding: 10px 20px;
+/* Estilo base para todos los botones de la tarjeta */
+.cookie-premium-buttons button {
+    width: 100%;
+    padding: 10px 15px;
     font-size: 13px;
     font-weight: bold;
-    border-radius: 4px;
+    border-radius: 5px;
     cursor: pointer;
     transition: all 0.2s ease;
-    flex: 1; 
-    min-width: 200px;
+    box-sizing: border-box;
+}
+
+/* Botones secundarios con borde (Necesarias y Personalizar) */
+.btn-cookie-outline {
+    background-color: transparent;
+    border: 1.5px solid #00a8cc; 
+    color: #00a8cc;
 }
 
 .btn-cookie-outline:hover {
-    background-color: rgba(0, 168, 204, 0.1);
+    background-color: rgba(0, 168, 204, 0.08);
 }
 
-/* Estilo para el botón sólido principal (Permitir todas) */
+/* Botón principal sólido (Permitir todas las cookies) */
 .btn-cookie-solid {
     background-color: #00a8cc; 
-    border: 2px solid #00a8cc;
+    border: 1.5px solid #00a8cc;
     color: #ffffff;
-    padding: 10px 20px;
-    font-size: 13px;
-    font-weight: bold;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: background-color 0.2s ease;
-    flex: 1;
-    min-width: 200px;
 }
 
 .btn-cookie-solid:hover {
