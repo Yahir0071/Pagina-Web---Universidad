@@ -14,25 +14,37 @@ html, body {
     overflow-x: hidden; 
 }
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
     background-color: #f0f4f8;
     color: #333;
     line-height: 1.6;
 }
 
-p{
+p {
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
     line-height: 2;
 }
 
-h1{
-    line-height: 2;
+h1 {
+    font-family: 'Montserrat', system-ui, -apple-system, sans-serif;
+    line-height: 1.3; 
     font-size: 32px;
+    font-weight: 700;
 }
 
-h2{
-    line-height: 3;
+h2 {
+    font-family: 'Montserrat', system-ui, -apple-system, sans-serif;
+    line-height: 1.4;
+    font-weight: 700;
 }
 
-li{
+li {
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
     line-height: 2;
+}
+
+/* Forzar la tipografía limpia en los botones y enlaces del menú de SmartWare */
+nav a, .btn-cta, .btn-solicitar-negro, button {
+    font-family: 'Montserrat', system-ui, -apple-system, sans-serif;
+    font-weight: 600;
 }
