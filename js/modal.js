@@ -1,18 +1,32 @@
 document.addEventListener('DOMContentLoaded', function() {
+
+    // ARRAY ÚNICO DE SERVICIOS (Configuración de Tarifas)
+    // Cada objeto contiene: id (valor), nombre y precio por m²
+    const servicios = [
+        { id: "minibodega", nombre: "Minibodega (Pymes)", precio: 35.00 },
+        { id: "industrial", nombre: "Almacenaje Industrial", precio: 18.50 },
+        { id: "crossdocking", nombre: "Cross-Docking", precio: 45.00 }
+    ];
+
+    // EJEMPLO: Si quieres agregar otro servicio más (ej: "Depósito Legal"):
+    // servicios.push({ id: "legal", nombre: "Depósito Legal (Documentos)", precio: 65.00 });
+    // Y automáticamente aparecerá en las opciones del select
+
+    // GENERAR OPCIONES DEL SELECT DINÁMICAMENTE
+    const selectServicio = document.getElementById('tipo_servicio');
+    if (selectServicio) {
+        servicios.forEach(servicio => {
+            const option = document.createElement('option');
+            option.value = servicio.id;
+            option.textContent = servicio.nombre;
+            selectServicio.appendChild(option);
+        });
+    }
+
     const formulario = document.getElementById('formulario-contacto');
     const modal = document.getElementById('modal-exito');
 
     if (!formulario || !modal) return;
-
-    // ==========================================
-    // ARRAYS PARALELOS (Configuración de Tarifas)
-    // ==========================================
-    // El primer array contiene los identificadores del elemento <select>
-    const tiposServicio = ["minibodega", "industrial", "crossdocking"];
-    // El segundo array almacena los precios correspondientes por metro cuadrado (m²)
-    const preciosPorMetro = [35.00, 18.50, 45.00]; 
-    // El tercer array guarda los nombres comerciales limpios para la interfaz
-    const nombresServicio = ["Minibodega (Pymes)", "Almacenaje Industrial", "Cross-Docking"];
 
     // Prevenir envío por defecto y procesar datos en el modal
     formulario.addEventListener('submit', function(event) {
@@ -21,18 +35,18 @@ document.addEventListener('DOMContentLoaded', function() {
         // 1. Captura de datos ingresados en el formulario antes de resetearlo
         const rucIngresado = document.getElementById('ruc').value;
         const razonSocial = document.getElementById('empresa').value;
-        const servicioSeleccionado = document.getElementById('tipo_servicio').value;
+        const servicioSeleccionadoId = document.getElementById('tipo_servicio').value;
         const metrosCuadrados = parseFloat(document.getElementById('espacio').value);
 
-        // 2. Uso de funciones de arrays (.indexOf) sobre los arrays paralelos
-        const indice = tiposServicio.indexOf(servicioSeleccionado);
+        // 2. Buscar el objeto del servicio seleccionado usando .find()
+        const servicioEncontrado = servicios.find(servicio => servicio.id === servicioSeleccionadoId);
 
         let htmlResumen = "";
 
-        if (indice !== -1) {
-            // Asociación de datos utilizando el mismo índice en los vectores paralelos
-            const precioUnitario = preciosPorMetro[indice];
-            const nombreFormateado = nombresServicio[indice];
+        if (servicioEncontrado) {
+            // Asociación de datos desde el objeto del servicio
+            const precioUnitario = servicioEncontrado.precio;
+            const nombreFormateado = servicioEncontrado.nombre;
             const costoTotal = precioUnitario * metrosCuadrados;
 
             // Construcción de la estructura de presentación para el modal
