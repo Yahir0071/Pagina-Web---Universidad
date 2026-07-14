@@ -594,12 +594,12 @@ footer {
     border-collapse: collapse;
 }
 
-/* ==========================================
-           MÓVILES: 0-480px
-  =========================================== */
+/* ==========================================================================
+   2. MÓVILES: 0-480px (Estructura original + Corrección de texto encimado)
+   ========================================================================== */
 @media (max-width: 480px) {
     .tabla-responsiva {
-        overflow-x: auto;
+        overflow-x: visible; /* Cambiado a visible para que la tarjeta no se corte lateralmente */
     }
 
     .tabla-responsiva table {
@@ -619,15 +619,38 @@ footer {
         display: block;
         margin-bottom: 1.2rem;
         border: 1px solid #ddd;
-        border-radius: 4px;
+        border-radius: 12px; /* Bordes redondeados modernos para la tarjeta */
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.04);
+        overflow: hidden;
+        background-color: #ffffff;
     }
 
-    .tabla-responsiva td {
-        display: block;
+    /* PRIMER CAMPO: Se convierte en la cabecera de la tarjeta con tu color azul */
+    .tabla-responsiva td:first-child {
+        background-color: #004080 !important;
+        color: white !important;
+        font-weight: bold;
+        text-align: left !important;
+        padding: 12px 16px !important;
+        
+        
+        display: block !important;
+        width: auto !important;
+        margin: -1px -1px 12px -1px !important;
+        flex: 1 1 100% !important;
+    }
+
+    .tabla-responsiva td:first-child::before {
+        display: none !important; /* Evita duplicar el texto en el título */
+    }
+
+    /* CAMPOS INTERNOS: Cambiados de position absolute a flexbox para arreglar el choque visual */
+    .tabla-responsiva td:not(:first-child):not(.tabla-nota) {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
         text-align: right;
-        padding: 0.6rem 0.8rem;
-        position: relative;
-        padding-left: 40%;
+        padding: 0.8rem 1rem;
         border-bottom: 1px solid #f0f0f0;
     }
 
@@ -635,20 +658,36 @@ footer {
         border-bottom: none;
     }
 
-    .tabla-responsiva td:before {
+    /* ETIQUETAS DINÁMICAS: Corregidas de position absolute a estáticas para que no se encima el texto */
+    .tabla-responsiva td:not(:first-child):not(.tabla-nota)::before {
         content: attr(data-label);
-        position: absolute;
-        left: 0.8rem;
         font-weight: bold;
         text-align: left;
-        width: 35%;
+        color: #64748b;
         font-size: 0.75rem;
+    }
+
+    /* RESALTADO DE COSTOS: Formato premium para precios sin alterar el resto */
+    .tabla-responsiva td[data-label="Costo Mensual"],
+    .tabla-responsiva td[data-label="Precio Mensual"] {
+        color: #059669;
+        font-weight: bold;
+        background-color: #f0fdf4;
+        margin: 0.4rem 1rem;
+        border-radius: 6px;
+        padding: 0.6rem 0.8rem;
+        border: none;
     }
 
     .tabla-nota {
         display: block !important;
+        background-color: #e0f2fe !important; 
+        color: #0369a1 !important;          
         text-align: center !important;
         padding: 0.8rem !important;
+        margin: 10px 1rem 0 1rem;
+        border: 1px solid #bae6fd !important;
+        border-radius: 8px;
     }
 
     .tabla-nota:before {
@@ -656,12 +695,13 @@ footer {
     }
 }
 
-/* ============================================
-           TABLETS PEQUEÑAS Y MEDIANAS: 481-768px
-   ============================================ */
+
+/* ==========================================================================
+   3. TABLETS PEQUEÑAS Y MEDIANAS: 481-768px (Estructura original + Corrección)
+   ========================================================================== */
 @media (min-width: 481px) and (max-width: 768px) {
     .tabla-responsiva {
-        overflow-x: auto;
+        overflow-x: visible;
     }
 
     .tabla-responsiva table {
@@ -681,16 +721,34 @@ footer {
         display: block;
         margin-bottom: 1.5rem;
         border: 1px solid #ddd;
-        border-radius: 4px;
-        padding: 0.5rem 0;
+        border-radius: 12px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.04);
+        overflow: hidden;
+        background-color: #ffffff;
     }
 
-    .tabla-responsiva td {
-        display: block;
+    .tabla-responsiva td:first-child {
+        background-color: #004080 !important;
+        color: white !important;
+        font-weight: bold;
+        text-align: left !important;
+        padding: 12px 16px !important;
+        display: block !important;
+        width: auto !important;
+        margin: -1px -1px 12px -1px !important;
+        flex: 1 1 100% !important;
+    }
+
+    .tabla-responsiva td:first-child::before {
+        display: none !important;
+    }
+
+    .tabla-responsiva td:not(:first-child):not(.tabla-nota) {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
         text-align: right;
         padding: 0.8rem 1rem;
-        position: relative;
-        padding-left: 45%;
         border-bottom: 1px solid #f0f0f0;
     }
 
@@ -698,19 +756,33 @@ footer {
         border-bottom: none;
     }
 
-    .tabla-responsiva td:before {
+    .tabla-responsiva td:not(:first-child):not(.tabla-nota)::before {
         content: attr(data-label);
-        position: absolute;
-        left: 1rem;
         font-weight: bold;
         text-align: left;
-        width: 40%;
+        color: #64748b;
+    }
+
+    .tabla-responsiva td[data-label="Costo Mensual"],
+    .tabla-responsiva td[data-label="Precio Mensual"] {
+        color: #059669;
+        font-weight: bold;
+        background-color: #f0fdf4;
+        margin: 0.5rem 1rem;
+        border-radius: 6px;
+        padding: 0.6rem 0.8rem;
+        border: none;
     }
 
     .tabla-nota {
         display: block !important;
+        background-color: #e0f2fe !important; 
+        color: #0369a1 !important;            
         text-align: center !important;
         padding: 1rem !important;
+        margin: 10px 1rem 0 1rem;
+        border: 1px solid #bae6fd !important;
+        border-radius: 8px;
     }
 
     .tabla-nota:before {
@@ -718,18 +790,20 @@ footer {
     }
 }
 
-/* ============================================
-           LAPTOPS: 769-1279px (Desktop normal)
-    ============================================ */
+
+/* ==========================================================================
+   4. LAPTOPS: 769-1279px (Tu bloque original intacto)
+   ========================================================================== */
 @media (min-width: 769px) and (max-width: 1279px) {
     .tabla-responsiva table {
         font-size: 0.95rem;
     }
 }
 
-/* ============================================
-           LARGE DESKTOPS: 1280px+
-   ============================================ */
+
+/* ==========================================================================
+   5. LARGE DESKTOPS: 1280px+ (Tu bloque original intacto)
+   ========================================================================== */
 @media (min-width: 1280px) {
     .tabla-responsiva table {
         font-size: 1rem;

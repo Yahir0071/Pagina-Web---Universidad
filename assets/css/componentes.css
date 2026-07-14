@@ -80,12 +80,11 @@ article {
     box-shadow: 0 10px 20px rgba(0,0,0,0.2);
 }
 
-/* --- TABLAS --- */
-/* Estilos base para tablas responsivas */
-table { 
-    width: 100%; 
-    border-collapse: collapse; 
-    margin-top: 20px; 
+/* --- TABLAS (ESTILOS GENERALES Y PC) --- */
+.tabla-responsiva {
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 2rem;
 }
 
 /* Título descriptivo de la tabla */
@@ -94,11 +93,16 @@ caption {
     font-size: 1.4rem; 
     margin-bottom: 15px;
     color: #002b5e; 
+    text-align: left; 
+}
+
+tr {
+    transition: background-color 0.2s ease; 
 }
 
 /* Estilos para encabezados y celdas */
 th, td { 
-    border: 1px solid #ccc; 
+    border: 1px solid #e2e8f0; 
     padding: 15px; 
     text-align: center;
 }
@@ -107,17 +111,18 @@ th, td {
 th { 
     background-color: #004080; 
     color: white; 
+    font-weight: 600;
 }
 
 /* Filas pares con fondo gris claro para mejor legibilidad */
 tr:nth-child(even) { 
-    background-color: #f9f9f9; 
+    background-color: #f8fafc; 
 }
 
 /* Clase especial para notas o información importante dentro de tablas */
 .tabla-nota { 
-    background-color: #b3d9ff; 
-    color: #002b5e; 
+    background-color: #e0f2fe !important; 
+    color: #0369a1; 
     text-align: center;
     font-weight: bold; 
 }
@@ -125,20 +130,10 @@ tr:nth-child(even) {
 /* --- TABLAS RESPONSIVAS --- */
 /* Contenedor con scroll horizontal para tablas en pantallas pequeñas */
 .tabla-responsiva {
-    overflow-x: auto; 
     width: 100%; 
     margin-top: 20px; 
 }
 
-/* Transición suave para interactividad */
-tr {
-    transition: background-color 0.2s ease; 
-}
-
-/* Filas pares con fondo claro */
-tr:nth-child(even) { 
-    background-color: #f9f9f9; 
-}
 
 /* Efecto hover: fila se resalta en azul claro al pasar el mouse */
 tr:hover {
