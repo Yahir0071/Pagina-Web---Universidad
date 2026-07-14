@@ -104,7 +104,7 @@
                 <p class="espaciado-inferior">Déjanos tu consulta detallada y te responderemos al correo corporativo.
                 </p>
 
-                <form action="#" method="POST">
+                <form id="formulario-pregunta" method="POST">
                     <fieldset>
                         <legend>Envíanos tu duda</legend>
 
@@ -156,6 +156,18 @@
             <button id="btn-necesarias" class="btn-cookie-outline">Solo usar cookies necesarias</button>
             <button id="btn-personalizar" class="btn-cookie-outline">Personalizar ></button>
             <button id="btn-aceptar-todas" class="btn-cookie-solid">Permitir todas las cookies</button>
+        </div>
+    </div>
+
+    <!-- MODAL DE ÉXITO -->
+    <div id="modal-pregunta" class="modal">
+        <div class="modal-contenido">
+            <div class="modal-emoji">✉️</div>
+            <div class="modal-titulo">¡Pregunta Recibida!</div>
+            <div class="modal-mensaje">Gracias por tu consulta. Nuestro equipo de soporte técnico se pondrá en contacto dentro de 24 horas hábiles.</div>
+
+            <div id="modal-resumen-pregunta" style="margin: 15px 0; text-align: left; border-top: 1px solid #eee; padding-top: 15px;"></div>
+            <div class="modal-cierre">Haz clic fuera para cerrar</div>
         </div>
     </div>
     
@@ -223,6 +235,7 @@
             <p>&copy; 2026 SmartWare. Todos los derechos reservados.</p>
         </div>
     </footer>
+    <script src="../../js/faq-modal.js"></script>
     <script src="../../js/java.js"></script>
 </body>
 
